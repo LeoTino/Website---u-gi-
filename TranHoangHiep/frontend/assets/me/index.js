@@ -9,15 +9,17 @@ $(document).ready(function() {
     }).done(function(data) {
         var srcImgSP=data.map(a =>a.Hinh1);
         var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
+        var arrGiaKD=data.map(a => a.GiaKhoiDiem);
+        var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
         var text="";
         var ten="";
-        for(var i=0;i<2;i++){
+        for(var i=0;i<arrNameSP.length;i++){
             var x="<div class=\"card\" style=\"width: 20rem\">\n" +
-            "<img class=\"card-img-top\" src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
+            "<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
             "<div class=\"card-body\">\n" +
             "<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
-            + "<p>"+ arrNameSP[i] +"</p>\n" //mieu ta
-            + "<a href=\"#\" class=\"btn btn-primary\">See details</a> </div> </div>" ;//button
+            + "<p>Giá khởi điểm: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
+            + "<a href=\"#\" class=\"btn btn-primary\">Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</a> </div> </div>" ;//button
             //ten+="<p> "+ arrNameSP[i] +" </p>\n";
             $("#sp").append(x);
         }
