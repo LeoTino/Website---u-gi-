@@ -11,8 +11,7 @@ exports.load = function(id) {
 }
 
 exports.loadByBiddedCount = function() {
-    var sql = `select sp.MaSP, sp.TenSP,sp.GiaKhoiDiem, sp.GiaMuaNgay,sp.Hinh1 from sanpham sp, 
-    daugia d where sp.MaSP=d.MaSP order by COUNT(*) desc limit 5 `;
+    var sql = `select DISTINCT sp.MaSP, sp.TenSP,sp.GiaKhoiDiem, sp.GiaMuaNgay,sp.Hinh1 from sanpham sp, daugia d where sp.MaSP=d.MaSP group by sp.MaSP order by COUNT(d.MaNguoiDau) desc limit 5 `;
     return db.load(sql);
 }
 
