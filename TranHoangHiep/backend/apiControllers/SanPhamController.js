@@ -13,6 +13,16 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/top5', (req, res) => {
+    sanPhamRepo.loadByBiddedCount().then(rows => {
+        res.json(rows);
+    }).catch(err => {
+        console.log(err);
+        res.statusCode = 500;
+        res.end('View error log on console.');
+    });
+});
+
 //
 // categories/5
 

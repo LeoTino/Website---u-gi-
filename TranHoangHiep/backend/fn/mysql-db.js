@@ -55,3 +55,28 @@ exports.save = function(sql) {
         cn.end();
     });
 }
+
+exports.insert = function (sql) {
+    var d = q.defer();
+
+    var cn = mysql.createConnection({
+        host: _HOST,
+        port: _PORT,
+        user: _USER,
+        password: _PWD,
+        database: _DB
+    });
+
+    cn.connect();
+    cn.query(sql, function (error, value) {
+        if (error) {
+            d.reject(error);
+        } else {
+            d.resolve(value.insertId);
+        }
+
+        cn.end();
+    });
+
+    return d.promise;
+}

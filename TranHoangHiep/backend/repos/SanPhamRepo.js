@@ -10,6 +10,12 @@ exports.load = function(id) {
     return db.load(sql);
 }
 
+exports.loadByBiddedCount = function() {
+    var sql = `select sp.MaSP, sp.TenSP,sp.GiaKhoiDiem, sp.GiaMuaNgay,sp.Hinh1 from sanpham sp, 
+    daugia d where sp.MaSP=d.MaSP order by COUNT(*) desc limit 5 `;
+    return db.load(sql);
+}
+
 exports.add = function(poco) {
     var sql = `insert into categories(TenSP) values('${poco.TenSP}')`;
     return db.insert(sql);
