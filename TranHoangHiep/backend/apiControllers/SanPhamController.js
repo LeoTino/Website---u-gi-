@@ -73,24 +73,6 @@ router.get('/:id', (req, res) => {
     }
 });
 
-router.post('/', (req, res) => {
-    sanPhamRepo.add(req.body)
-        .then(insertId => {
-            var poco = {
-                MaSP: insertId,
-                TenSP: req.body.TenSP
-            };
-            res.statusCode = 201;
-            res.json(poco);
-        })
-        .catch(err => {
-            console.log(err);
-            res.statusCode = 500;
-            res.end();
-        });
-});
-
-
 router.delete('/:id', (req, res) => {
     if (req.params.id) {
         var id = req.params.id;

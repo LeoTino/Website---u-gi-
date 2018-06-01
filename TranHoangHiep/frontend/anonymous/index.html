@@ -3,26 +3,57 @@
 <head>
 	<title>Client</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    
 </head>
 <body>
+    <script src="assets/jquery-3.1.1.min.js"></script>
+    <script src="assets/me/index.js"></script>
 	<div class="container">
-		<button id="btnLoadAll" type="button">
-			Load categories
-		</button>
-		<br>
-		<br>
-		<table border="1" width="300px">
-			<thead>
-				<tr>
-					<td width="40px">#</td>
-					<td>name</td>
-					<td>&nbsp;</td>
-				</tr>
-			</thead>
-			<tbody id="list"></tbody>
-		</table>
+
+    <!--########################### nav bar ################################################ -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="register.html">Đăng ký</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="timkiemsp.html">
+            <input  class="form-control mr-sm-2" name="query" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+            <button  class="btn btn-outline-success my-2 my-sm-0" type="submit" >Tìm kiếm</button>
+            </form>
+        </div>
+    </nav>
+
+<!-- ################################################### -->
+        <br>
+  		<div class="row">
+    		<div  class="col-sm-4 col-md-4">
+                <h5>5 sản phẩm nhiều lượt ra giá nhất</h5>
+                <br><br>
+                <div id="top5"></div>
+    		</div>
+<!-- ###############################################-->
+    		<div class="col-sm-4 col-md-4">
+                <h5>5 sản phẩm giá cao nhất</h5>
+                <br><br>
+              	<div id="top5b"></div>
+    		</div>
+<!-- ###############################################-->
+    		<div class="col-sm-4 col-md-4">
+    		    <h5>5 sản phẩm gần kết thúc</h5>
+                <br><br>
+                <div id="top5c"></div>
+            </div>
+    	</div>
 	</div>
-	<script src="assets/jquery-3.1.1.min.js"></script>
-	<script src="assets/me/index.js"></script>
+    <br><br><br>
 </body>
 </html>

@@ -25,10 +25,6 @@ exports.loadByExpireTime = function() {
     return db.load(sql);
 }
 
-exports.add = function(poco) {
-    var sql = `insert into categories(TenSP) values('${poco.TenSP}')`;
-    return db.insert(sql);
-}
 
 exports.delete = function(id) {
     var sql = `delete from sanpham where MaSP = ${id}`;
