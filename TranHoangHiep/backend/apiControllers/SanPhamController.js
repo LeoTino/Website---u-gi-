@@ -23,6 +23,16 @@ router.get('/top5', (req, res) => {
     });
 });
 
+router.get('/top5b', (req, res) => {
+    sanPhamRepo.loadByPrice().then(rows => {
+        res.json(rows);
+    }).catch(err => {
+        console.log(err);
+        res.statusCode = 500;
+        res.end('View error log on console.');
+    });
+});
+
 //
 // categories/5
 

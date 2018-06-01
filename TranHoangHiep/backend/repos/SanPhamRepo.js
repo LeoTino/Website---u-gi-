@@ -15,6 +15,11 @@ exports.loadByBiddedCount = function() {
     return db.load(sql);
 }
 
+exports.loadByPrice = function() {
+    var sql = `select DISTINCT sp.MaSP, sp.TenSP,sp.GiaKhoiDiem, sp.GiaMuaNgay,sp.Hinh1 from sanpham sp group by sp.MaSP order by sp.GiaMuaNgay desc limit 5 `;
+    return db.load(sql);
+}
+
 exports.add = function(poco) {
     var sql = `insert into categories(TenSP) values('${poco.TenSP}')`;
     return db.insert(sql);
