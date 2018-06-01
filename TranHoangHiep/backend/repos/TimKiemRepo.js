@@ -6,6 +6,11 @@ exports.loadKetQua = function(query) {
     return db.load(sql);
 }
 
+exports.loadKetQuaByTime = function(query) {
+    var sql = `select DISTINCT MaSP, TenSP, TimeKetThuc, GiaKhoiDiem, GiaMuaNgay,Hinh1 from sanpham where TenSP like '%${query}%' ORDER BY TimeKetThuc DESC`;
+    return db.load(sql);
+}
+
 
 /*exports.loadAll = function() {
     var sql = 'select * from sanpham';

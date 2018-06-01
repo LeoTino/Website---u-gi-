@@ -8,7 +8,44 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+$(document).on('click', '#btnTime', function(){
+    var a = getParameterByName('query');
+    $("#aaa").hide();
+    $.ajax({
+        url: 'http://localhost:3000/timkiem/query/sorttime/'+ a,
+        dataType: 'json',
+        timeout: 10000,
+    }).done(function(data) {
+        var srcImgSP=data.map(a =>a.Hinh1);
+        var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
+        var arrGiaKD=data.map(a => a.GiaKhoiDiem);
+        var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
+        var horizontal="<div class=\"row\">";
+        var text=horizontal;
 
+        //$("#aaa").append(horizontal);
+        for(var i=0;i<srcImgSP.length;i++){
+            var ht="<div class=\"column\">"+
+    				"<div class=\"card\" style=\"width: 16rem\">\n" +
+            		"<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
+            		"<div class=\"card-body\">\n" +
+            		"<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
+            		+ "<p>Giá khởi điểm: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
+            		+ "<a href=\"#\" class=\"btn btn-primary\">Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</a> </div> </div>"+
+    				"</div>";
+    		text=text.concat(ht);
+        }
+        var div="</div>";
+        $("#sorttime").append(text.concat(div));
+        $("#btnTime").prop('disabled', true);
+        //$("#aaa").show();
+        
+    }).fail(function(xhr, textStatus, error) {
+        console.log(textStatus);
+        console.log(error);
+        console.log(xhr);
+    });
+});
 
 $(document).ready(function() {
 	var a = getParameterByName('query');
@@ -39,9 +76,11 @@ $(document).ready(function() {
         }
         var div="</div>";
         $("#aaa").append(text.concat(div));
+        
     }).fail(function(xhr, textStatus, error) {
         console.log(textStatus);
         console.log(error);
         console.log(xhr);
     });
 });
+
