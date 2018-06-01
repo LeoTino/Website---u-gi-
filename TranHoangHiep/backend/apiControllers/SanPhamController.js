@@ -33,8 +33,17 @@ router.get('/top5b', (req, res) => {
     });
 });
 
+router.get('/top5c', (req, res) => {
+    sanPhamRepo.loadByExpireTime().then(rows => {
+        res.json(rows);
+    }).catch(err => {
+        console.log(err);
+        res.statusCode = 500;
+        res.end('View error log on console.');
+    });
+});
+
 //
-// categories/5
 
 router.get('/:id', (req, res) => {
     if (req.params.id) {

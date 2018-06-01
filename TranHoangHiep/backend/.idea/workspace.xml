@@ -35,20 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SanPhamRepo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SanPhamRepo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="133">
+              <caret line="23" column="141" selection-start-line="23" selection-start-column="141" selection-end-line="23" selection-end-column="141" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SanPhamController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SanPhamController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -79,8 +79,8 @@
         <option value="$PROJECT_DIR$/apiController/SanPhamController.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/fn/mysql-db.js" />
-        <option value="$PROJECT_DIR$/repos/SanPhamRepo.js" />
         <option value="$PROJECT_DIR$/apiControllers/SanPhamController.js" />
+        <option value="$PROJECT_DIR$/repos/SanPhamRepo.js" />
       </list>
     </option>
   </component>
@@ -161,7 +161,7 @@
       <path value="$PROJECT_DIR$/node_modules/vary/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1340" />
@@ -239,12 +239,12 @@
       <workItem from="1527683530494" duration="691000" />
       <workItem from="1527684273102" duration="6018000" />
       <workItem from="1527746039393" duration="8120000" />
-      <workItem from="1527834238823" duration="734000" />
+      <workItem from="1527834238823" duration="2264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15563000" />
+    <option name="totallyTimeSpent" value="17093000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,7 +256,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2541106" />
@@ -358,17 +358,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
+    <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
+    <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state relative-caret-position="133">
+          <caret line="23" column="141" selection-start-line="23" selection-start-column="141" selection-end-line="23" selection-end-column="141" />
         </state>
       </provider>
     </entry>

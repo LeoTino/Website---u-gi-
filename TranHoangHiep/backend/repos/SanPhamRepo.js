@@ -20,6 +20,11 @@ exports.loadByPrice = function() {
     return db.load(sql);
 }
 
+exports.loadByExpireTime = function() {
+    var sql = `SELECT DISTINCT MaSP, TenSP, GiaMuaNgay, Hinh1, TIMEDIFF(TimeKetThuc,NOW()) as TimeDistance from sanpham ORDER BY TimeDistance asc LIMIT 5`;
+    return db.load(sql);
+}
+
 exports.add = function(poco) {
     var sql = `insert into categories(TenSP) values('${poco.TenSP}')`;
     return db.insert(sql);
