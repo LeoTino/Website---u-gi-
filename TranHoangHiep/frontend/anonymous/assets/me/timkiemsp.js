@@ -8,6 +8,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
 $(document).on('click', '#btnTime', function(){
     var a = getParameterByName('query');
     $("#aaa").empty();
@@ -32,7 +33,7 @@ $(document).on('click', '#btnTime', function(){
         //$("#aaa").append(horizontal);
         for(var i=0;i<srcImgSP.length;i++){
             var ht="<form action=\"chitietsp.html\"><div class=\"column\">"+
-            		"<input type=\"hidden\" name=\"id\" value="+ arrMaSP[i] +">"+
+            		"<input type=\"hidden\" name=\"query\" value="+ arrMaSP[i] +">"+
     				"<div class=\"card\" style=\"width: 16rem\">\n" +
             		"<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
             		"<div class=\"card-body\">\n" +
@@ -81,7 +82,7 @@ $(document).on('click', '#btnPrice', function(){
 
         for(var i=0;i<srcImgSP.length;i++){
             var ht="<form action=\"chitietsp.html\"><div class=\"column\">"+
-            		"<input type=\"hidden\" name=\"id\" value="+ arrMaSP[i] +">"+
+            		"<input type=\"hidden\" name=\"query\" value="+ arrMaSP[i] +">"+
     				"<div class=\"card\" style=\"width: 16rem\">\n" +
             		"<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
             		"<div class=\"card-body\">\n" +
@@ -114,6 +115,7 @@ $(document).ready(function() {
         dataType: 'json',
         timeout: 10000,
     }).done(function(data) {
+    	var a = getParameterByName('query');
         var srcImgSP=data.map(a =>a.Hinh1);
         var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
         var arrGiaKD=data.map(a => a.GiaHienTai);
@@ -128,7 +130,7 @@ $(document).ready(function() {
         //$("#aaa").append(horizontal);
         for(var i=0;i<srcImgSP.length;i++){
             var ht="<form action=\"chitietsp.html\"><div class=\"column\">"+
-            		"<input type=\"hidden\" name=\"id\" value="+ arrMaSP[i] +">"+
+            		"<input type=\"hidden\" name=\"query\" value="+ arrMaSP[i] +">"+
     				"<div class=\"card\" style=\"width: 16rem\">\n" +
             		"<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
             		"<div class=\"card-body\">\n" +
@@ -143,7 +145,6 @@ $(document).ready(function() {
         }
         var div="</div>";
         $("#aaa").append(text.concat(div));
-        
     }).fail(function(xhr, textStatus, error) {
         console.log(textStatus);
         console.log(error);

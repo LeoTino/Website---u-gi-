@@ -5,6 +5,7 @@ cors = require('cors');
 
 var sanphamCtrl = require('./apiControllers/SanPhamController');
 var timkiemCtrl = require('./apiControllers/TimKiemController');
+var chitietspCtrl = require('./apiControllers/ChiTietSanPhamController')
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 
 app.use('/sanpham', sanphamCtrl);
 app.use('/timkiem', timkiemCtrl);
+app.use('/chitiet', chitietspCtrl);
 
 app.listen(3000, () => {
     console.log('API running on port 3000');

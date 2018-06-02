@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<style type="text/css">
+	body {font-family: Arial;}
+
+	/* Style the tab */
+	.tab {
+	    overflow: hidden;
+	    border: 1px solid #ccc;
+	    background-color: #f1f1f1;
+	}
+
+	/* Style the buttons inside the tab */
+	.tab button {
+	    background-color: inherit;
+	    float: left;
+	    border: none;
+	    outline: none;
+	    cursor: pointer;
+	    padding: 14px 16px;
+	    transition: 0.3s;
+	    font-size: 17px;
+	}
+
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+	    background-color: #ddd;
+	}
+
+	/* Create an active/current tablink class */
+	.tab button.active {
+	    background-color: #ccc;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+	    display: none;
+	    padding: 6px 12px;
+	    border: 1px solid #ccc;
+	    border-top: none;
+	}
+</style>
+</head>
+<body>
+    <script src="assets/jquery-3.1.1.min.js"></script>
+    <script src="assets/me/chitietsp.js"></script>
+	<div class="container">
+    <!--########################### nav bar ################################################ -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="register.html">Đăng ký</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="timkiemsp.html">
+            <input name="query" class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+            <button id="test" class="btn btn-outline-success my-2 my-sm-0" type="submit" >Tìm kiếm</button>
+            </form>
+        </div>
+    </nav>
+
+<!-- ################################################### -->
+	<div class="tab">
+  <button id=tt class="tablinks" onclick="openCity(event, 'thongtin')">Thông tin sản phẩm</button>
+  <button class="tablinks" onclick="openCity(event, 'mieuta')">Mô tả chi tiết</button>
+  <button class="tablinks" onclick="openCity(event, 'hinhanh')">Hình ảnh</button>
+</div>
+    <div id="thongtin" class="tabcontent">
+  <h3 id="tensp"></h3>
+  <p id="giaht"></p>
+  <p id="giamn"></p>
+  <p id="seller"></p>
+  <p id="sellerstar"></p>
+  <p id="buyer"></p>
+  <p id="buyerstar"></p>
+  <p id="timedang"></p>
+  <p id="timeketthuc"></p>
+</div>
+
+<div id="mieuta" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="hinhanh" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+    </div>
+    <br><br><br>
+</body>
+</html>
