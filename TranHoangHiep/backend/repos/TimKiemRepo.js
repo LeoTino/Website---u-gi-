@@ -2,17 +2,17 @@ var db = require('../fn/mysql-db');
 
 
 exports.loadKetQua = function(query) {
-    var sql = `select DISTINCT MaSP, TenSP,GiaKhoiDiem, GiaMuaNgay,Hinh1 from sanpham where TenSP like '%${query}%'`;
+    var sql = `select DISTINCT sp.MaSP, sp.TenSP, COUNT(dg.MaSP)-1 as SoLuotDauGia , TIMEDIFF(sp.TimeKetThuc,NOW()) as TimeDistance, concat('xxxxxx',RIGHT(TenNguoiDung, 5)) as TenND, sp.GiaHienTai, sp.GiaMuaNgay,sp.Hinh1 from sanpham sp, nguoidung nd, daugia dg where sp.MaSP=dg.MaSP AND MaNguoiBan=MaNguoiDung AND TenSP like '%${query}%' GROUP BY dg.MaSP`;
     return db.load(sql);
 }
 
 exports.loadKetQuaByTime = function(query) {
-    var sql = `select DISTINCT MaSP, TenSP, TimeKetThuc, GiaKhoiDiem, GiaMuaNgay,Hinh1 from sanpham where TenSP like '%${query}%' ORDER BY TimeKetThuc DESC`;
+    var sql = `select DISTINCT sp.MaSP, sp.TenSP, COUNT(dg.MaSP)-1 as SoLuotDauGia , TIMEDIFF(sp.TimeKetThuc,NOW()) as TimeDistance, concat('xxxxxx',RIGHT(TenNguoiDung, 5)) as TenND, sp.GiaHienTai, sp.GiaMuaNgay,sp.Hinh1 from sanpham sp, nguoidung nd, daugia dg where sp.MaSP=dg.MaSP AND MaNguoiBan=MaNguoiDung AND TenSP like '%${query}%' GROUP BY dg.MaSP ORDER BY TimeKetThuc DESC`;
     return db.load(sql);
 }
 
 exports.loadKetQuaByPrice = function(query) {
-    var sql = `select DISTINCT MaSP, TenSP, TimeKetThuc, GiaKhoiDiem, GiaMuaNgay,Hinh1 from sanpham where TenSP like '%${query}%' ORDER BY GiaHienTai asc`;
+    var sql = `select DISTINCT sp.MaSP, sp.TenSP, COUNT(dg.MaSP)-1 as SoLuotDauGia , TIMEDIFF(sp.TimeKetThuc,NOW()) as TimeDistance, concat('xxxxxx',RIGHT(TenNguoiDung, 5)) as TenND, sp.GiaHienTai, sp.GiaMuaNgay,sp.Hinh1 from sanpham sp, nguoidung nd, daugia dg where sp.MaSP=dg.MaSP AND MaNguoiBan=MaNguoiDung AND TenSP like '%${query}%' GROUP BY dg.MaSP ORDER BY GiaHienTai asc`;
     return db.load(sql);
 }
 

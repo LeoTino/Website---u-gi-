@@ -20,21 +20,29 @@ $(document).on('click', '#btnTime', function(){
     }).done(function(data) {
         var srcImgSP=data.map(a =>a.Hinh1);
         var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
-        var arrGiaKD=data.map(a => a.GiaKhoiDiem);
+        var arrGiaKD=data.map(a => a.GiaHienTai);
         var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
+        var arrTimeDistance=data.map(a=>a.TimeDistance);
+        var arrBidTimes=data.map(a=>a.SoLuotDauGia);
+        var arrSeller=data.map(a=>a.TenND);
+        var arrMaSP=data.map(a=>a.MaSP);
         var horizontal="<div class=\"row\">";
         var text=horizontal;
 
         //$("#aaa").append(horizontal);
         for(var i=0;i<srcImgSP.length;i++){
-            var ht="<div class=\"column\">"+
+            var ht="<form action=\"chitietsp.html\"><div class=\"column\">"+
+            		"<input type=\"hidden\" name=\"id\" value="+ arrMaSP[i] +">"+
     				"<div class=\"card\" style=\"width: 16rem\">\n" +
             		"<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
             		"<div class=\"card-body\">\n" +
             		"<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
-            		+ "<p>Giá khởi điểm: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
-            		+ "<a href=\"#\" class=\"btn btn-primary\">Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</a> </div> </div>"+
-    				"</div>";
+            		+ "<p>Giá hiện tại: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
+            		+ "<p>Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</p>\n"
+            		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
+            		+ "<p>Người bán: "+ arrSeller[i] +"</p>\n"
+            		+ "<button type=\"submit\" class=\"btn btn-primary\">Còn lại: "+ arrTimeDistance[i] +" </button> </div> </div>"+
+    				"</div></form>";
     		text=text.concat(ht);
         }
         var div="</div>";
@@ -62,20 +70,28 @@ $(document).on('click', '#btnPrice', function(){
     }).done(function(data) {
         var srcImgSP=data.map(a =>a.Hinh1);
         var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
-        var arrGiaKD=data.map(a => a.GiaKhoiDiem);
+        var arrGiaKD=data.map(a => a.GiaHienTai);
         var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
+        var arrTimeDistance=data.map(a=>a.TimeDistance);
+        var arrBidTimes=data.map(a=>a.SoLuotDauGia);
+        var arrSeller=data.map(a=>a.TenND);
+        var arrMaSP=data.map(a=>a.MaSP);
         var horizontal="<div class=\"row\">";
         var text=horizontal;
 
         for(var i=0;i<srcImgSP.length;i++){
-            var ht="<div class=\"column\">"+
+            var ht="<form action=\"chitietsp.html\"><div class=\"column\">"+
+            		"<input type=\"hidden\" name=\"id\" value="+ arrMaSP[i] +">"+
     				"<div class=\"card\" style=\"width: 16rem\">\n" +
             		"<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
             		"<div class=\"card-body\">\n" +
             		"<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
-            		+ "<p>Giá khởi điểm: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
-            		+ "<a href=\"#\" class=\"btn btn-primary\">Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</a> </div> </div>"+
-    				"</div>";
+            		+ "<p>Giá hiện tại: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
+            		+ "<p>Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</p>\n"
+            		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
+            		+ "<p>Người bán: "+ arrSeller[i] +"</p>\n"
+            		+ "<button type=\"submit\" class=\"btn btn-primary\">Còn lại: "+ arrTimeDistance[i] +" </button> </div> </div>"+
+    				"</div></form>";
     		text=text.concat(ht);
         }
         var div="</div>";
@@ -100,21 +116,29 @@ $(document).ready(function() {
     }).done(function(data) {
         var srcImgSP=data.map(a =>a.Hinh1);
         var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
-        var arrGiaKD=data.map(a => a.GiaKhoiDiem);
+        var arrGiaKD=data.map(a => a.GiaHienTai);
         var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
+        var arrTimeDistance=data.map(a=>a.TimeDistance);
+        var arrBidTimes=data.map(a=>a.SoLuotDauGia);
+        var arrSeller=data.map(a=>a.TenND);
+        var arrMaSP=data.map(a=>a.MaSP);
         var horizontal="<div class=\"row\">";
         var text=horizontal;
 
         //$("#aaa").append(horizontal);
         for(var i=0;i<srcImgSP.length;i++){
-            var ht="<div class=\"column\">"+
+            var ht="<form action=\"chitietsp.html\"><div class=\"column\">"+
+            		"<input type=\"hidden\" name=\"id\" value="+ arrMaSP[i] +">"+
     				"<div class=\"card\" style=\"width: 16rem\">\n" +
             		"<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
             		"<div class=\"card-body\">\n" +
             		"<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
-            		+ "<p>Giá khởi điểm: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
-            		+ "<a href=\"#\" class=\"btn btn-primary\">Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</a> </div> </div>"+
-    				"</div>";
+            		+ "<p>Giá hiện tại: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
+            		+ "<p>Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</p>\n"
+            		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
+            		+ "<p>Người bán: "+ arrSeller[i] +"</p>\n"
+            		+ "<button type=\"submit\" class=\"btn btn-primary\">Còn lại: "+ arrTimeDistance[i] +" </button> </div> </div>"+
+    				"</div></form>";
     		text=text.concat(ht);
         }
         var div="</div>";
