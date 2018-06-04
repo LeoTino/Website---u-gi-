@@ -68,4 +68,14 @@ router.get('/query/sortprice/:query', (req, res) => {
     }
 });
 
+router.get('/loaddanhmuc', (req, res) => {
+    sanPhamRepo.loadDanhMuc().then(rows => {
+        res.json(rows);
+    }).catch(err => {
+        console.log(err);
+        res.statusCode = 500;
+        res.end('View error log on console.');
+    });
+});
+
 module.exports = router;

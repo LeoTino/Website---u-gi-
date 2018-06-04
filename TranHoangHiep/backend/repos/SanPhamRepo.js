@@ -25,6 +25,11 @@ exports.loadByExpireTime = function() {
     return db.load(sql);
 }
 
+exports.loadByDanhMuc = function() {
+    var sql = `SELECT DISTINCT MaSP, TenSP, GiaMuaNgay, Hinh1, TIMEDIFF(TimeKetThuc,NOW()) as TimeDistance from sanpham ORDER BY TimeDistance asc LIMIT 5`;
+    return db.load(sql);
+}
+
 
 exports.delete = function(id) {
     var sql = `delete from sanpham where MaSP = ${id}`;

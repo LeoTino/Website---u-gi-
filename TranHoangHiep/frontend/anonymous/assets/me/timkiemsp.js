@@ -41,8 +41,9 @@ $(document).on('click', '#btnTime', function(){
             		+ "<p>Giá hiện tại: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
             		+ "<p>Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</p>\n"
             		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
-            		+ "<p>Người bán: "+ arrSeller[i] +"</p>\n"
-            		+ "<button type=\"submit\" class=\"btn btn-primary\">Còn lại: "+ arrTimeDistance[i] +" </button> </div> </div>"+
+            		+ "<p>Người đang giữ giá: "+ arrSeller[i] +"</p>\n"
+            		+ "<p>Còn lại: "+ arrTimeDistance[i] +"</p>\n"
+            		+ "<button type=\"submit\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
     				"</div></form>";
     		text=text.concat(ht);
         }
@@ -90,8 +91,9 @@ $(document).on('click', '#btnPrice', function(){
             		+ "<p>Giá hiện tại: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
             		+ "<p>Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</p>\n"
             		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
-            		+ "<p>Người bán: "+ arrSeller[i] +"</p>\n"
-            		+ "<button type=\"submit\" class=\"btn btn-primary\">Còn lại: "+ arrTimeDistance[i] +" </button> </div> </div>"+
+            		+ "<p>Người đang giữ giá: "+ arrSeller[i] +"</p>\n"
+            		+ "<p>Còn lại: "+ arrTimeDistance[i] +"</p>\n"
+            		+ "<button type=\"submit\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
     				"</div></form>";
     		text=text.concat(ht);
         }
@@ -138,8 +140,9 @@ $(document).ready(function() {
             		+ "<p>Giá hiện tại: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
             		+ "<p>Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</p>\n"
             		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
-            		+ "<p>Người bán: "+ arrSeller[i] +"</p>\n"
-            		+ "<button type=\"submit\" class=\"btn btn-primary\">Còn lại: "+ arrTimeDistance[i] +" </button> </div> </div>"+
+            		+ "<p>Người đang giữ giá: "+ arrSeller[i] +"</p>\n"
+            		+ "<p>Còn lại: "+ arrTimeDistance[i] +"</p>\n"
+            		+ "<button type=\"submit\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
     				"</div></form>";
     		text=text.concat(ht);
         }
@@ -152,3 +155,24 @@ $(document).ready(function() {
     });
 });
 
+//http://localhost:3000/timkiem/loaddanhmuc
+$(document).ready(function() {
+    $.ajax({
+        url: 'http://localhost:3000/timkiem/loaddanhmuc',
+        dataType: 'json',
+        timeout: 10000,
+    }).done(function(data) {
+    	var arrID=data.map(a =>a.MaDM);
+    	var arrTen=data.map(a=>a.TenDM)
+    	var text="";
+    	for(var i=0;i<arrID.length;i++){
+    		var ht="<button id=\""+arrID[i]+"\">"+arrTen[i]+"</button>\n";
+    		text=text.concat(ht);
+    	}
+    	$("#dm").append(text);
+    	}).fail(function(xhr, textStatus, error) {
+        console.log(textStatus);
+        console.log(error);
+        console.log(xhr);
+    });
+});

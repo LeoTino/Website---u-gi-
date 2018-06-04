@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimKiemRepo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TimKiemRepo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="8" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -47,8 +47,17 @@
       <file leaf-file-name="TimKiemController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiControllers/TimKiemController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="52" column="12" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+            <state relative-caret-position="232">
+              <caret line="78" column="3" lean-forward="true" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SanPhamRepo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -62,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChiTietSanPhamController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChiTietSanPhamController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiControllers/ChiTietSanPhamController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="1666">
               <caret line="98" column="34" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
             </state>
           </provider>
@@ -95,15 +104,15 @@
         <option value="$PROJECT_DIR$/summer.html" />
         <option value="$PROJECT_DIR$/fn/mysql-connect.js" />
         <option value="$PROJECT_DIR$/apiController/SanPhamController.js" />
-        <option value="$PROJECT_DIR$/repos/SanPhamRepo.js" />
         <option value="$PROJECT_DIR$/fn/mysql-db.js" />
         <option value="$PROJECT_DIR$/apiControllers/SanPhamController.js" />
         <option value="$PROJECT_DIR$/../frontend/anonymous/assets/style.css" />
-        <option value="$PROJECT_DIR$/apiControllers/TimKiemController.js" />
-        <option value="$PROJECT_DIR$/repos/TimKiemRepo.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/repos/ChiTietSanPhamRepo.js" />
         <option value="$PROJECT_DIR$/apiControllers/ChiTietSanPhamController.js" />
+        <option value="$PROJECT_DIR$/repos/TimKiemRepo.js" />
+        <option value="$PROJECT_DIR$/apiControllers/TimKiemController.js" />
+        <option value="$PROJECT_DIR$/repos/SanPhamRepo.js" />
       </list>
     </option>
   </component>
@@ -184,7 +193,7 @@
       <path value="$PROJECT_DIR$/node_modules/vary/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1340" />
@@ -274,12 +283,12 @@
       <workItem from="1527746039393" duration="8120000" />
       <workItem from="1527834238823" duration="9108000" />
       <workItem from="1527927130815" duration="11875000" />
-      <workItem from="1528078933595" duration="2494000" />
+      <workItem from="1528078933595" duration="8788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38306000" />
+    <option name="totallyTimeSpent" value="44600000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -291,15 +300,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2541106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2541106" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007474" side_tool="true" weight="0.34158415" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925262" visible="true" weight="0.34158415" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49925262" visible="true" weight="0.34158415" />
       <window_info id="Structure" order="1" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
       <window_info id="Favorites" order="2" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
@@ -321,7 +330,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -476,20 +485,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../frontend/anonymous/assets/style.css" />
-    <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="100" selection-end-line="100" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="2" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fn/mysql-db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -504,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="8" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repos/ChiTietSanPhamRepo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -518,17 +506,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiControllers/TimKiemController.js">
+    <entry file="file://$PROJECT_DIR$/apiControllers/ChiTietSanPhamController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="52" column="12" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+        <state relative-caret-position="1666">
+          <caret line="98" column="34" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiControllers/ChiTietSanPhamController.js">
+    <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="98" column="34" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+        <state relative-caret-position="221">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="5" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiControllers/TimKiemController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="78" column="3" lean-forward="true" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
