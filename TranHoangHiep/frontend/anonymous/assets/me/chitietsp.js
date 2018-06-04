@@ -12,6 +12,9 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
+$(document).ready(function() {
+    document.getElementById("tt").click();
+})
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -29,7 +32,6 @@ var formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
 });
 
-
 $(document).on('click', '#tt', function(){
     var a = getParameterByName('query');
     $("#tensp").empty();
@@ -45,12 +47,12 @@ $(document).on('click', '#tt', function(){
         timeout: 10000,
     }).done(function(data) {
         $("#tensp").append(data.TenSP);
-        $("#giaht").append("Giá hiện tại: "+formatter.format(data.GiaHienTai));
-        $("#giamn").append("Giá mua ngay: "+formatter.format(data.GiaMuaNgay));
-        $("#seller").append("Tên người bán: "+ data.TenNguoiBan);
-        $("#sellerstar").append("Điểm đánh giá người bán: "+data.DiemDanhGia);
-        $("#timedang").append("Thời gian đăng sản phẩm: "+data.TimeDangSP);
-        $("#timeketthuc").append("Thời gian kết thúc đấu giá: "+data.TimeKetThuc);
+        $("#giaht").append(formatter.format(data.GiaHienTai));
+        $("#giamn").append(formatter.format(data.GiaMuaNgay));
+        $("#seller").append( data.TenNguoiBan);
+        $("#sellerstar").append(data.DiemDanhGia);
+        $("#timedang").append(data.TimeDangSP);
+        $("#timeketthuc").append(data.TimeKetThuc);
     }).fail(function(xhr, textStatus, error) {
         console.log(textStatus);
         console.log(error);
@@ -67,8 +69,58 @@ $(document).on('click', '#tt', function(){
         dataType: 'json',
         timeout: 10000,
     }).done(function(data) {
-        $("#buyer").append("Người mua giữ giá cao nhất hiện tại: "+data.TenNguoiDung);
-        $("#buyerstar").append("Điểm đánh giá người mua: "+data.DiemDanhGia);
+        $("#buyer").append(data.TenNguoiDung);
+        $("#buyerstar").append(data.DiemDanhGia);
+    }).fail(function(xhr, textStatus, error) {
+        console.log(textStatus);
+        console.log(error);
+        console.log(xhr);
+    });
+});
+
+$(document).on('click', '#mt', function(){
+    var a = getParameterByName('query');
+    $('#mota').empty();
+    $("#keyword").text(a);
+    $.ajax({
+        url: 'http://localhost:3000/chitiet/mota/'+ a,
+        dataType: 'json',
+        timeout: 10000,
+    }).done(function(data) {
+        var arrTime=data.map(a=>a.Time);
+        var arrMoTa=data.map(a=>a.MoTa);
+        var text="";
+        for(var i=0;i<arrTime.length;i++){
+            var ht="<tr>"+
+                   "<td>*"+arrTime[i]+":</td>"+
+                   "<td>"+arrMoTa[i]+"</td>"+
+                   "</tr>";
+            text=text.concat(ht);
+        }
+        $("#mota").append(text);
+    }).fail(function(xhr, textStatus, error) {
+        console.log(textStatus);
+        console.log(error);
+        console.log(xhr);
+    });
+});
+
+//<img class="img-responsive" src="assets\picture\img3\1-798x450.jpg" alt="Chania" width="800" height="450">
+$(document).on('click', '#ha', function(){
+    var a = getParameterByName('query');
+    $("#img1").empty();
+    $("#img2").empty();
+    $("#img3").empty();
+    $.ajax({
+        url: 'http://localhost:3000/chitiet/hinhanh/'+ a,
+        dataType: 'json',
+        timeout: 10000,
+    }).done(function(data) {
+        var temp1="<img src=";
+        var temp2=" alt=\"Nature\" style=\"width:100%\">";
+        $("#img1").append(temp1+data.Hinh1+temp2);
+        $("#img2").append(temp1+data.Hinh2+temp2);
+        $("#img3").append(temp1+data.Hinh3+temp2);
     }).fail(function(xhr, textStatus, error) {
         console.log(textStatus);
         console.log(error);

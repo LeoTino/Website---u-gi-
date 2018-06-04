@@ -43,7 +43,40 @@
 	    border: 1px solid #ccc;
 	    border-top: none;
 	}
-</style>
+
+
+	table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+	}
+
+	th, td {
+	    text-align: left;
+	    padding: 16px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #f2f2f2
+	}
+
+	.container {
+    position: relative;
+    font-family: Arial;
+	}
+
+	.text-block {
+	    position: absolute;
+	    bottom: 20px;
+	    right: 20px;
+	    background-color: black;
+	    color: white;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+	</style>
+
 </head>
 <body>
     <script src="assets/jquery-3.1.1.min.js"></script>
@@ -73,29 +106,78 @@
 <!-- ################################################### -->
 	<div class="tab">
   <button id=tt class="tablinks" onclick="openCity(event, 'thongtin')">Thông tin sản phẩm</button>
-  <button class="tablinks" onclick="openCity(event, 'mieuta')">Mô tả chi tiết</button>
-  <button class="tablinks" onclick="openCity(event, 'hinhanh')">Hình ảnh</button>
+  <button id=mt class="tablinks" onclick="openCity(event, 'mieuta')">Mô tả chi tiết</button>
+  <button id=ha class="tablinks" onclick="openCity(event, 'hinhanh')">Hình ảnh</button>
 </div>
     <div id="thongtin" class="tabcontent">
-  <h3 id="tensp"></h3>
-  <p id="giaht"></p>
-  <p id="giamn"></p>
-  <p id="seller"></p>
-  <p id="sellerstar"></p>
-  <p id="buyer"></p>
-  <p id="buyerstar"></p>
-  <p id="timedang"></p>
-  <p id="timeketthuc"></p>
+    	  
+	  <table>
+	  <tr>
+	    <th>Tên sản phẩm</th>
+	    <th><h3 id="tensp"></h3></th>
+	  </tr>
+	  <tr>
+	    <td>Giá hiện tại</td>
+	    <td><p id="giaht"></p></td>
+	  </tr>
+	  <tr>
+	    <td>Giá mới nhất</td>
+	    <td><p id="giamn"></p></td>
+	  </tr>
+	  <tr>
+	    <td>Người bán</td>
+	    <td><p id="seller"></p></td>
+	  </tr>
+	  <tr>
+	    <td>Điểm đánh giá người bán</td>
+	    <td><p id="sellerstar"></p></td>
+	  </tr>
+	  <tr>
+	    <td>Người mua giữ giá cao nhất</td>
+	    <td><p id="buyer"></p></td>
+	  </tr>
+	  <tr>
+	    <td>Điểm đánh giá người mua</td>
+	    <td><p id="buyerstar"></p></td>
+	  </tr>
+	  <tr>
+	    <td>Thời gian đăng sản phẩm</td>
+	    <td><p id="timedang"></p></td>
+	  </tr>
+	  <tr>
+	    <td>Thời gian kết thúc đấu giá</td>
+	    <td><p id="timeketthuc"></p></td>
+	  </tr>
+	</table>
+  
 </div>
 
 <div id="mieuta" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <table>
+  	<div id=mota></div>
+  </table>
 </div>
 
 <div id="hinhanh" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+	<h2>Một số hình ảnh chi tiết về sản phẩm</h2><br>
+  	<div class="container">
+  		<p id="img1"></p> 
+  		<div class="text-block">
+	  	<h2>Hình ảnh 1</h2>
+		</div>
+	</div>
+	<div class="container">
+	  	<p id="img2"></p>
+		<div class="text-block">
+	  	<h2>Hình ảnh 2</h2>
+		</div>
+	</div>
+	<div class="container">	
+	  	<p id="img3"></p> 
+	  	<div class="text-block">
+		<h2>Hình ảnh 3</h2>
+		</div>
+	</div>
 </div>
 
     </div>
