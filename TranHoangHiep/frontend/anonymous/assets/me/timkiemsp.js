@@ -156,7 +156,7 @@ $(document).ready(function() {
 });
 
 //http://localhost:3000/timkiem/loaddanhmuc
-$(document).ready(function() {
+/*$(document).ready(function() {
     $.ajax({
         url: 'http://localhost:3000/timkiem/loaddanhmuc',
         dataType: 'json',
@@ -175,4 +175,4 @@ $(document).ready(function() {
         console.log(error);
         console.log(xhr);
     });
-});
+});*/

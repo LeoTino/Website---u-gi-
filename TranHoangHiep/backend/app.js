@@ -1,11 +1,12 @@
 var express = require('express'),
     bodyParser = require('body-parser')
-morgan = require('morgan')
-cors = require('cors');
+    morgan = require('morgan')
+    cors = require('cors');
 
 var sanphamCtrl = require('./apiControllers/SanPhamController');
 var timkiemCtrl = require('./apiControllers/TimKiemController');
 var chitietspCtrl = require('./apiControllers/ChiTietSanPhamController')
+var dangkyCtrl = require('./apiControllers/DangKyController')
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 app.use('/sanpham', sanphamCtrl);
 app.use('/timkiem', timkiemCtrl);
 app.use('/chitiet', chitietspCtrl);
+app.use('/dangky', dangkyCtrl);
 
 app.listen(3000, () => {
     console.log('API running on port 3000');

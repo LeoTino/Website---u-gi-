@@ -1,18 +1,7 @@
-$(function() {
-
-    $('.datepicker').datepicker({
-        autoclose: true,
-        format: 'd/m/yyyy',
-        startDate: '-3d'
-    });
-
-    $.validator.addMethod("vndate", function(value, element) {
-        return this.optional(element) || /^\d\d?\/\d\d?\/\d\d\d\d$/.test(value);
-    });
-
+$(function(){
     $('#registerForm').validate({
         rules: {
-            UID: {
+            HoTen: {
                 required: true
             },
             PWD: {
@@ -23,21 +12,20 @@ $(function() {
                 required: true,
                 equalTo: $('#txtPassword')
             },
-            FullName: {
+            DiaChi: {
                 required: true,
             },
             Email: {
                 required: true,
                 email: true
             },
-            DOB: {
-                required: true,
-                vndate: true
+            Username: {
+                required: true
             },
         },
         messages: {
-            UID: {
-                required: 'Please input UID'
+            HoTen: {
+                required: 'Chưa nhập họ tên.'
             },
             PWD: {
                 required: "Chưa nhập mật khẩu.",
@@ -47,73 +35,73 @@ $(function() {
                 required: "Chưa nhập lại mật khẩu.",
                 equalTo: "Mật khẩu nhập lại không khớp."
             },
-            FullName: {
-                required: "Chưa nhập họ tên.",
+            DiaChi: {
+                required: "Chưa nhập địa chỉ.",
             },
             Email: {
                 required: "Chưa nhập email.",
                 email: "Email không đúng định dạng."
             },
-            DOB: {
-                required: "Chưa nhập ngày sinh.",
-                vndate: 'FAILED'
+            Username: {
+                required: "Chưa nhập tên đăng nhập."
             },
         },
 
         highlight: function(element) { // hightlight error inputs
-            $(element)
-                .closest('.form-group')
-                .addClass('has-error'); // set error class to the control group
+            $(element).closest('.form-group').addClass('alert alert-danger'); // set error class to the control group
         },
 
-        success: function(label) {
+        success: function(element) {
             // var name = label.attr('for');
             // $('[name=' + name + ']').closest('.form-group').removeClass('has-error');
 
-            label.closest('.form-group').removeClass('has-error');
-            label.remove();
+             element
+            .text('OK!').addClass('alert alert-primary')
+            .closest('.form-group').removeClass('alert alert-danger').addClass('alert alert-success');
         },
 
         errorElement: 'span',
         errorClass: 'help-block'
-    });
 
+    });
     $('#txtUserName').select();
 });
 
 
-$('#btnRegister').on('click', function() {
-
+$(document).on('click', '#btnRegister', function(){
     var isValid = $('#registerForm').valid();
     if (isValid) {
-        // var captcha_response = grecaptcha.getResponse();
-        // console.log(captcha_response);
+        var _hoten = $('#txtHoTen').val(),
+            _pwd=$('#txtPassword').val(),
+            _diachi=$('#txtName').val(),
+            _email=$('#txtEmail').val(),
+            _username=$('#txtUsername').val();    
 
         var body = {
-            captcha_response: grecaptcha.getResponse()
-        };
-
+            HoTen: _hoten,
+            Password: _pwd,
+            DiaChi: _diachi,
+            Email: _email,
+            Username: _username,
+        }    
         $.ajax({
-            url: 'http://localhost:3000/users/captcha',
+            url: 'http://localhost:3000/dangky/',
             dataType: 'json',
             timeout: 10000,
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(body)
         }).done(function(data) {
-            // console.log(data);
-            if (data.success) {
-                swal("Good job!", "You clicked the button!", "success");
-            } else {
-                grecaptcha.reset();
-                swal("Invalid captcha.", "You clicked the button!", "error");
-            }
+            $('#status').append("<div class=\"alert alert-success\"><p>Đăng ký thành công</p></div>");
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
+            delay(5000);
         }).fail(function(xhr, textStatus, error) {
             console.log(textStatus);
             console.log(error);
             console.log(xhr);
         });
-    } else {
-        // swal("Good job!", "You clicked the button!", "error");
     }
-});
+        else  {
+        
+    }
+})
