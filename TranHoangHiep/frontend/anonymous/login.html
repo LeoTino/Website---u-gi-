@@ -3,26 +3,70 @@
 <head>
 	<title>Client</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="assets/jquery-3.1.1.min.js"></script>
+	<script src="assets/me/login.js"></script>
+	<script src="assets/jquery-validation-1.12.0/jquery.validate.min.js"></script>
+	<script src="assets/me/system.js"></script>
+	<script type="text/javascript">myFunction();</script>
 </head>
 <body>
+
 	<div class="container">
-		<button id="btnLoadAll" type="button">
-			Load categories
-		</button>
-		<br>
-		<br>
-		<table border="1" width="300px">
-			<thead>
-				<tr>
-					<td width="40px">#</td>
-					<td>name</td>
-					<td>&nbsp;</td>
-				</tr>
-			</thead>
-			<tbody id="list"></tbody>
-		</table>
+
+    <!--########################### nav bar ################################################ -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Đăng ký</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="timkiemsp.html">
+            <input name="query" class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+            <button id="test" class="btn btn-outline-success my-2 my-sm-0" type="submit" >Tìm kiếm</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+	<div class="container">
+    <p id='status'></p>
+  	<h1>Đăng nhập tài khoản</h1><br>
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <form action="buyer/profile.html" id="loginForm" onsubmit="return validate()">
+          <div class="form-group row">
+            <label for="txtEmail" class="col-sm-2 control-label"><h5>Email</h5></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="txtEmail" name="Email" placeholder="Steve">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="txtPassword" class="col-sm-2 control-label"><h5>Password</h5></label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="Password" id="txtPassword" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group row">
+          	<label for="" class="col-sm-2 control-label"></label>
+            <div class="col-sm-offset-2 col-sm-10">
+              <button id="btnLogin" type="button" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-registration-mark"></span>
+                Đăng nhập
+              </button>
+            </div>
+          </div>
+      </form>
+  	</div>
 	</div>
-	<script src="assets/jquery-3.1.1.min.js"></script>
-	<script src="assets/me/index.js"></script>
+</div>
+
+
+
+	
 </body>
 </html>

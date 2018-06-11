@@ -19,9 +19,6 @@ $(function(){
                 required: true,
                 email: true
             },
-            Username: {
-                required: true
-            },
         },
         messages: {
             HoTen: {
@@ -42,9 +39,6 @@ $(function(){
                 required: "Chưa nhập email.",
                 email: "Email không đúng định dạng."
             },
-            Username: {
-                required: "Chưa nhập tên đăng nhập."
-            },
         },
 
         highlight: function(element) { // hightlight error inputs
@@ -60,8 +54,6 @@ $(function(){
             .closest('.form-group').removeClass('alert alert-danger').addClass('alert alert-success');
         },
 
-        errorElement: 'span',
-        errorClass: 'help-block'
 
     });
     $('#txtUserName').select();
@@ -74,15 +66,13 @@ $(document).on('click', '#btnRegister', function(){
         var _hoten = $('#txtHoTen').val(),
             _pwd=$('#txtPassword').val(),
             _diachi=$('#txtName').val(),
-            _email=$('#txtEmail').val(),
-            _username=$('#txtUsername').val();    
+            _email=$('#txtEmail').val();
 
         var body = {
             HoTen: _hoten,
             Password: _pwd,
             DiaChi: _diachi,
             Email: _email,
-            Username: _username,
         }    
         $.ajax({
             url: 'http://localhost:3000/dangky/',

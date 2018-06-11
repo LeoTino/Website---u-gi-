@@ -30,6 +30,11 @@ exports.loadByDanhMuc = function() {
     return db.load(sql);
 }
 
+exports.getThongTinDauGia = function(id) {
+    var sql = `SELECT GiaKhoiDiem, GiaMuaNgay, GiaHienTai, BuocGia from sanpham where MaSP=${id}`;
+    return db.load(sql);
+}
+
 
 exports.delete = function(id) {
     var sql = `delete from sanpham where MaSP = ${id}`;

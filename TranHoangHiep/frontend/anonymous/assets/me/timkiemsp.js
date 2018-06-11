@@ -43,7 +43,7 @@ $(document).on('click', '#btnTime', function(){
             		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
             		+ "<p>Người đang giữ giá: "+ arrSeller[i] +"</p>\n"
             		+ "<p>Còn lại: "+ arrTimeDistance[i] +"</p>\n"
-            		+ "<button type=\"submit\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
+            		+ "<button type=\"submit\" id=\"btnSeeDetail\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
     				"</div></form>";
     		text=text.concat(ht);
         }
@@ -93,7 +93,7 @@ $(document).on('click', '#btnPrice', function(){
             		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
             		+ "<p>Người đang giữ giá: "+ arrSeller[i] +"</p>\n"
             		+ "<p>Còn lại: "+ arrTimeDistance[i] +"</p>\n"
-            		+ "<button type=\"submit\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
+            		+ "<button type=\"submit\" id=\"btnSeeDetail\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
     				"</div></form>";
     		text=text.concat(ht);
         }
@@ -142,7 +142,7 @@ $(document).ready(function() {
             		+ "<p>Số lượt đấu giá: "+ arrBidTimes[i] +" lần</p>\n"
             		+ "<p>Người đang giữ giá: "+ arrSeller[i] +"</p>\n"
             		+ "<p>Còn lại: "+ arrTimeDistance[i] +"</p>\n"
-            		+ "<button type=\"submit\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
+            		+ "<button type=\"submit\" id=\"btnSeeDetail\" class=\"btn btn-primary\">Xem chi tiết</button> </div> </div>"+
     				"</div></form>";
     		text=text.concat(ht);
         }

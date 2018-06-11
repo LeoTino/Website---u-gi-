@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="assets/jquery-3.1.1.min.js"></script>
+	<script src="assets/me/profile.js"></script>
+	<script src="assets/jquery-validation-1.12.0/jquery.validate.min.js"></script>
+	<script src="js/md5.min.js">
+	</script>
+  <style type="text/css">
+    /* Style the tab */
+  .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+      background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+      background-color: #ccc;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+      text-align: left;
+      padding: 16px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #f2f2f2
+  }
+
+  </style>
+</head>
+<body>
+	<div class="container">
+
+    <!--########################### nav bar ################################################ -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html"><p id="local"></p></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.html">Đăng xuất</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="timkiemsp.html">
+            <input name="query" class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+            <button id="test" class="btn btn-outline-success my-2 my-sm-0" type="submit" >Tìm kiếm</button>
+            </form>
+        </div>
+    </nav>
+</div>
+<div class="container">
+  <h1>Quản lí thông tin cá nhân</h1><br>
+  <!-- Tab links -->
+  <div class="tab">
+    <button id="btnDoiThongTin" class="tablinks" onclick="openCity(event, 'tabChangeInfo')">Đổi thông tin</button>
+    <button class="tablinks" onclick="openCity(event, 'tabXemDanhGia')">Xem đánh giá</button>
+    <button class="tablinks" onclick="openCity(event, 'tabWishList')">Danh sách yêu thích</button>
+    <button class="tablinks" onclick="openCity(event, 'tabDangDauGia')">Đang đấu giá</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="tabChangeInfo" class="tabcontent">
+    <div class="container">
+    <p id='status'></p>
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <form action="profile.html" id="changeinfo" onsubmit="return validate()">
+          <div class="form-group row">
+            <label for="txtEmail" class="col-sm-2 control-label"><h5>Email</h5></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="txtEmail" name="Email" placeholder="Điền vào email mới">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="txtEmail" class="col-sm-2 control-label"><h5>Họ tên</h5></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="txtHoTen" name="HoTen" placeholder="Điền vào họ tên mới">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="txtPassword" class="col-sm-2 control-label"><h5>Password cũ</h5></label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="OldPassword" id="txtOldPassword" placeholder="Password cũ">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="txtPassword" class="col-sm-2 control-label"><h5>Password mới</h5></label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="NewPassword" id="txtNewPassword" placeholder="Password mới">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="txtPassword" class="col-sm-2 control-label"><h5>Xác nhận password mới</h5></label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="ConfirmNewPassword" id="txtConfirmNewPassword" placeholder="Xác nhận password mới">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="" class="col-sm-2 control-label"></label>
+            <div class="col-sm-offset-2 col-sm-10">
+              <button id="btnChangeInfo" type="button" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-registration-mark"></span>
+                Đổi thông tin
+              </button>
+            </div>
+          </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="tabXemDanhGia" class="tabcontent">
+    <br><h3 style="color:red;font-weight: bold;" id="diemDG">Điểm đánh giá của bạn:  </h3><br>
+  <table>
+      <p id="tableDanhGia"></p>      
+    </table>
+  </div>
+
+  <div id="tabWishList" class="tabcontent">
+    <p id="tableWishList"></p>
+  </div>
+
+  <div id="tabDangDauGia" class="tabcontent">
+    <p id="tableDangDauGia"></p>
+  </div>
+   
+</div>
+
+	
