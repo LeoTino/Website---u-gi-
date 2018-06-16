@@ -267,41 +267,36 @@ $(document).on('click', '#btnDauGia', function(){
     if (isNaN(giadau) || giadau<_giadenghi) {
         alert("Giá đấu của bạn không hợp lệ");
     } else {
-        if(_diemdanhgia<8){
-            alert('Điểm đánh giá của bạn không đủ để tham gia đấu giá sản phẩm này');
+        var r = confirm("Bạn có thực sự muốn đấu giá sản phẩm này?");
+        if (r == false) {
+            alert('Bạn đã hủy đấu giá sản phẩm này!');
         }
         else{
-            var r = confirm("Bạn có thực sự muốn đấu giá sản phẩm này?");
-            if (r == false) {
-                alert('Bạn đã hủy đấu giá sản phẩm này!');
+            var body ={
+                MaSP : maSP,
+                Email : email,
+                GiaDau : giadau,
             }
-            else{
-                var body ={
-                    MaSP : maSP,
-                    Email : email,
-                    GiaDau : giadau,
-                }
-                $.ajax({
-                    url: 'http://localhost:3000/daugia/themgiaodich/',
-                    dataType: 'json',
-                    timeout: 10000,
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify(body)
-                }).done(function(data) {
-                    alert("Đấu giá thành công!");
-                }).fail(function(xhr, textStatus, error) {
-                    console.log(textStatus);
-                    console.log(error);
-                    console.log(xhr);
-                }).fail(function(xhr, textStatus, error) {
-                    console.log(textStatus);
-                    console.log(error);
-                    console.log(xhr);
-                });
-            }
+            $.ajax({
+                url: 'http://localhost:3000/daugia/themgiaodich/',
+                dataType: 'json',
+                timeout: 10000,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(body)
+            }).done(function(data) {
+                alert("Đấu giá thành công!");
+            }).fail(function(xhr, textStatus, error) {
+                console.log(textStatus);
+                console.log(error);
+                console.log(xhr);
+            }).fail(function(xhr, textStatus, error) {
+                console.log(textStatus);
+                console.log(error);
+                console.log(xhr);
+            });
         }
-    }
+    }    
 })
 
 $(document).on('click', '#bl', function(){

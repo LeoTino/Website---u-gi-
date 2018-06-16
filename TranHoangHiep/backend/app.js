@@ -10,7 +10,8 @@ var dangkyCtrl = require('./apiControllers/DangKyController');
 var loginCtrl=require('./apiControllers/LoginController');
 var changeinfoCtrl=require('./apiControllers/QuanLiThongTinController');
 var dsyeuthichCtrl=require('./apiControllers/DSYeuThichController');
-var daugiaCtrl=require('./apiControllers/DauGiaController')
+var daugiaCtrl=require('./apiControllers/DauGiaController');
+var quyendangbanCtrl=require('./apiControllers/QuyenDangBanController');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/login', loginCtrl);
 app.use('/changeinfo', changeinfoCtrl);
 app.use('/wishlist',dsyeuthichCtrl);
 app.use('/daugia',daugiaCtrl);
+app.use('/quyendangban',quyendangbanCtrl);
 
 app.listen(3000, () => {
     console.log('API running on port 3000');
