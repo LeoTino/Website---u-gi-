@@ -285,7 +285,25 @@ $(document).on('click', '#btnDauGia', function(){
                 contentType: 'application/json',
                 data: JSON.stringify(body)
             }).done(function(data) {
-                alert("Đấu giá thành công!");
+                $.ajax({
+                    url: 'http://localhost:3000/daugia/capnhatgiahientai',
+                    dataType: 'json',
+                    timeout: 10000,
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(body)
+                }).done(function(data) {
+                    alert("Đấu giá thành công!");
+                    window.reload();
+                }).fail(function(xhr, textStatus, error) {
+                    console.log(textStatus);
+                    console.log(error);
+                    console.log(xhr);
+                }).fail(function(xhr, textStatus, error) {
+                    console.log(textStatus);
+                    console.log(error);
+                    console.log(xhr);
+                });
             }).fail(function(xhr, textStatus, error) {
                 console.log(textStatus);
                 console.log(error);
@@ -331,6 +349,59 @@ $(document).on('click', '#bl', function(){
     });
 });
 
+
+$(document).on('click', '#ud', function(){
+    var email=localStorage.getItem('email');
+    var maSP=getParameterByName('query');
+    $("#contentUpdate").empty();
+    $.ajax({
+        url: 'http://localhost:3000/chitiet/emailnguoiban/'+ maSP,
+        dataType: 'json',
+        timeout: 10000,
+    }).done(function(data) {
+        if (data.Email==email) {
+            document.getElementById("frmUpdate").style.display="block";
+        }
+        else
+        {
+            document.getElementById("frmUpdate").style.display="none";
+            $("#contentUpdate").append("Sản phẩm này không phải của bạn<br>Bạn không có quyền cập nhật sản phẩm này");
+        }
+    }).fail(function(xhr, textStatus, error) {
+        console.log(textStatus);
+        console.log(error);
+        console.log(xhr);
+    });
+})
+
+
+$(document).on('click', '#btnUpdate', function(){
+    var _maSP=getParameterByName('query');
+    var _moTa=$('#txtMoTa2').val();
+    if($('#txtMoTa2').val()==''){
+        alert("Bạn hãy nhập mô tả sản phẩm");
+        return;
+    }
+    var body = {
+        MaSP: _maSP,
+        MoTa: _moTa,  
+    }
+    $.ajax({
+        url: 'http://localhost:3000/dangsp/themMoTa2',
+        dataType: 'json',
+        timeout: 10000,
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(body)
+    }).done(function(data) {
+        alert("Thêm thành công");
+        window.reload();
+    }).fail(function(xhr, textStatus, error) {
+        console.log(textStatus);
+        console.log(error);
+        console.log(xhr);
+    });  
+})
 //check thong tin dau gia
 /*$(function(){
     $('#frmDauGia').validate({

@@ -26,7 +26,7 @@ exports.getWishList = function(email) {
 }
 
 exports.getSPDangDauGia = function(email) {
-    var sql = `select sp.MaSP, sp.TenSP, date_format(dg.ThoiGianDauGia, '%W %m/%d/%Y %l:%i %p') as ThoiGianDauGia, dg.GiaDau from daugia dg, nguoidung nd, sanpham sp where sp.MaSP=dg.MaSP and nd.MaNguoiDung=dg.MaNguoiDau and nd.Email='${email}' order by ThoiGianDauGia desc`;
+    var sql = `select distinct sp.MaSP, sp.TenSP, date_format(dg.ThoiGianDauGia, '%W %m/%d/%Y %l:%i %p') as ThoiGianDauGia, dg.GiaDau from daugia dg, nguoidung nd, sanpham sp where sp.MaSP=dg.MaSP and nd.MaNguoiDung=dg.MaNguoiDau and nd.Email='${email}' group by sp.TenSP order by ThoiGianDauGia desc`;
     return db.load(sql);
 }
 

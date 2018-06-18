@@ -285,7 +285,24 @@ $(document).on('click', '#btnDauGia', function(){
                 contentType: 'application/json',
                 data: JSON.stringify(body)
             }).done(function(data) {
-                alert("Đấu giá thành công!");
+                $.ajax({
+                    url: 'http://localhost:3000/daugia/capnhatgiahientai',
+                    dataType: 'json',
+                    timeout: 10000,
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(body)
+                }).done(function(data) {
+                    alert("Đấu giá thành công!");
+                }).fail(function(xhr, textStatus, error) {
+                    console.log(textStatus);
+                    console.log(error);
+                    console.log(xhr);
+                }).fail(function(xhr, textStatus, error) {
+                    console.log(textStatus);
+                    console.log(error);
+                    console.log(xhr);
+                });
             }).fail(function(xhr, textStatus, error) {
                 console.log(textStatus);
                 console.log(error);

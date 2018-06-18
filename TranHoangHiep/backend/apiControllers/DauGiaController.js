@@ -20,6 +20,23 @@ router.post('/themgiaodich', (req, res) => {
         });
 });
 
+router.post('/capnhatgiahientai', (req, res) => {
+    sanPhamRepo.updateCurPrice(req.body)
+        .then(poco => {
+            var poco={
+                MaSP: req.body.MaSP,
+                GiaDau: req.body.GiaDau
+            };
+            res.statusCode = 201;
+            res.json(req.body);
+        })
+        .catch(err => {
+            console.log(err);
+            res.statusCode = 500;
+            res.end();
+        });
+});
+
 router.get('/bidlog/:id', (req, res) => {
     if (req.params.id) {
         var id = req.params.id;

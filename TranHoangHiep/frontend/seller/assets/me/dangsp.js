@@ -143,7 +143,7 @@ $(document).on('click', '#btnDangSP', function(){
                 }).done(function(data) {
                     check++;
                     if(check==2){
-                        alert("ok");
+                        alert("Sản phẩm của bạn đã được đăng!");
                     }
                 }).fail(function(xhr, textStatus, error) {
                     console.log(textStatus);

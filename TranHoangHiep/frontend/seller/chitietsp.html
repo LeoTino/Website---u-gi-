@@ -117,6 +117,7 @@
   <button id=ha class="tablinks" onclick="openCity(event, 'hinhanh')">Hình ảnh</button>
   <button id=dg class="tablinks" onclick="openCity(event, 'daugia')">Đấu giá</button>
   <button id=bl class="tablinks" onclick="openCity(event, 'bidlog')">Lịch sử đấu giá</button>
+  <button id=ud class="tablinks" onclick="openCity(event, 'update')">Cập nhật thông tin</button>
 	</div>
     <div id="thongtin" class="tabcontent">
     <button id="btnWishList" class="btn btn-success">Thêm vào danh sách yêu thích</button>	  
@@ -228,6 +229,14 @@
 		<table>
 			<p id="tableBidLog"></p>
 		</table>
+	</div>
+
+	<div id="update" class="tabcontent">
+		<form id="frmUpdate">
+			<textarea rows="10" class="form-control" id="txtMoTa2" name="MoTa2" placeholder="Nhập một vài thông tin mô tả sản phẩm này. Để xuống dòng, vui lòng thêm tag <br>"></textarea>
+			<button id="btnUpdate" type="button" class="btn btn-info btn-lg">Cập nhật thông tin</button>
+		</form>
+		<p id="contentUpdate"></p>
 	</div>
 
 

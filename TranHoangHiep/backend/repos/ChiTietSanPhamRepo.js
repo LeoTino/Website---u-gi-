@@ -19,3 +19,9 @@ exports.loadHinhAnhSP = function(query) {
     var sql=`select Hinh1, Hinh2, Hinh3 from sanpham where MaSP=${query}`;
     return db.load(sql);
 }
+
+exports.loadEmailNguoiBan = function(query) {
+    var sql=`select nd.Email from sanpham sp, nguoidung nd where sp.MaSP=${query} and sp.MaNguoiBan=nd.MaNguoiDung`;
+    return db.load(sql);
+}
+

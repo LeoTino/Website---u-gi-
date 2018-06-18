@@ -44,4 +44,22 @@ router.post('/themMoTa', (req, res) => {
         });
 });
 
+//them bang ma sp va mota
+router.post('/themMoTa2', (req, res) => {
+    sanPhamRepo.ThemMoTa2(req.body)
+        .then(poco => {
+            var poco={
+                MaSP: req.body.MaSP,
+                MoTa: req.body.MoTa
+            };
+            res.statusCode = 201;
+            res.json(req.body);
+        })
+        .catch(err => {
+            console.log(err);
+            res.statusCode = 500;
+            res.end();
+        });
+});
+
 module.exports=router;
