@@ -82,6 +82,11 @@ $(document).on('click', '#btnLogin', function(){
                     localStorage.setItem('type',type);
                     window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/seller/profile.html";
                 }
+                if (type=='admin') {
+                    localStorage.setItem('email',_email);
+                    localStorage.setItem('type',type);
+                    window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/admin/index.html";
+                }
             }
             else{
             	alert("Bạn nhập sai Email hoặc Mật khẩu. Vui lòng kiểm tra lại");
