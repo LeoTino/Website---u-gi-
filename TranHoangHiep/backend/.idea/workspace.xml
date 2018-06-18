@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="501bb09f-ff50-4d86-8720-47fca7b7f89d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiControllers/ChiTietSanPhamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/apiControllers/ChiTietSanPhamController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiControllers/DangSanPhamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/apiControllers/DangSanPhamController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiControllers/DauGiaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/apiControllers/DauGiaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repos/ChiTietSanPhamRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/repos/ChiTietSanPhamRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js" beforeDir="false" afterPath="$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repos/DangSanPhamRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/repos/DangSanPhamRepo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repos/DauGiaRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/repos/DauGiaRepo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repos/QuanLiThongTinRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/repos/QuanLiThongTinRepo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/buyer/assets/me/chitietsp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/buyer/assets/me/chitietsp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/seller/assets/me/chitietsp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/seller/assets/me/chitietsp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/seller/assets/me/dangsp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/seller/assets/me/dangsp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/seller/chitietsp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/seller/chitietsp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/seller/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/seller/profile.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -43,8 +34,8 @@
       <file leaf-file-name="DangSanPhamRepo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repos/DangSanPhamRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="51">
+              <caret line="3" column="79" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -52,8 +43,17 @@
       <file leaf-file-name="QuanLiThongTinRepo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repos/QuanLiThongTinRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="204">
+              <caret line="33" column="218" selection-start-line="33" selection-start-column="218" selection-end-line="33" selection-end-column="218" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuanLiThongTinController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -128,18 +128,18 @@
         <option value="$PROJECT_DIR$/repos/SanPhamRepo.js" />
         <option value="$PROJECT_DIR$/apiControllers/SanPhamController.js" />
         <option value="$PROJECT_DIR$/repos/NguoiDungRepo.js" />
-        <option value="$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js" />
         <option value="$PROJECT_DIR$/apiControllers/DSYeuThichController.js" />
         <option value="$PROJECT_DIR$/repos/QuyenDangBanRepo.js" />
         <option value="$PROJECT_DIR$/apiControllers/QuyenDangBanController.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/apiControllers/DauGiaController.js" />
         <option value="$PROJECT_DIR$/repos/DauGiaRepo.js" />
-        <option value="$PROJECT_DIR$/repos/QuanLiThongTinRepo.js" />
         <option value="$PROJECT_DIR$/repos/ChiTietSanPhamRepo.js" />
         <option value="$PROJECT_DIR$/apiControllers/ChiTietSanPhamController.js" />
-        <option value="$PROJECT_DIR$/repos/DangSanPhamRepo.js" />
         <option value="$PROJECT_DIR$/apiControllers/DangSanPhamController.js" />
+        <option value="$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js" />
+        <option value="$PROJECT_DIR$/repos/DangSanPhamRepo.js" />
+        <option value="$PROJECT_DIR$/repos/QuanLiThongTinRepo.js" />
       </list>
     </option>
   </component>
@@ -391,12 +391,12 @@
       <workItem from="1528723470678" duration="583000" />
       <workItem from="1529143069515" duration="10574000" />
       <workItem from="1529176217450" duration="1270000" />
-      <workItem from="1529329039373" duration="5519000" />
+      <workItem from="1529329039373" duration="7574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116423000" />
+    <option name="totallyTimeSpent" value="118478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,12 +411,12 @@
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2787743" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2787743" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50224215" side_tool="true" weight="0.34158415" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49775785" visible="true" weight="0.34158415" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49775785" visible="true" weight="0.34158415" />
       <window_info id="Structure" order="1" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32838285" />
       <window_info id="Favorites" order="2" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
@@ -722,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apiControllers/DauGiaController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
@@ -740,13 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="257" selection-start-line="8" selection-start-column="257" selection-end-line="8" selection-end-column="257" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -771,17 +757,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/repos/DangSanPhamRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="51">
+          <caret line="3" column="79" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repos/QuanLiThongTinRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="204">
+          <caret line="33" column="218" selection-start-line="33" selection-start-column="218" selection-end-line="33" selection-end-column="218" />
         </state>
       </provider>
     </entry>

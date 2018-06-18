@@ -96,5 +96,18 @@ router.get('/spdangdg/:email', (req, res) => {
     });
 });
 
+router.get('/spdangban/:email', (req, res) => {
+    if (req.params.email) {
+        var email = req.params.email;
+    }
+    sanPhamRepo.getSPDangBan(email).then(rows => {
+        res.json(rows);
+    }).catch(err => {
+        console.log(err);
+        res.statusCode = 500;
+        res.end('View error log on console.');
+    });
+});
+
 module.exports = router;
 

@@ -262,4 +262,38 @@ $(document).on('click', '#btnChangeInfo', function(){
 	});
 
 
+$(document).on('click', '#btnDangBan', function(){
+    var email=localStorage.getItem('email');
+    $('#tableDangDangBan').empty();
+    $.ajax({
+        url: 'http://localhost:3000/changeinfo/spdangban/'+email,
+        dataType: 'json',
+        timeout: 10000,
+    }).done(function(data) {
+        var tabletext="<tr>"+
+                      "<th>Thời gian kết thúc</th>"+
+                      "<th>Tên sản phẩm</th>"+
+                      "<th>Giá hiện tại</th>"+
+                      "</tr>";
+        var arrTenSP=data.map(a=>a.TenSP);
+        var arrMaSP=data.map(a=>a.MaSP);
+        var arrGia=data.map(a=>a.GiaHienTai);
+        var arrTime=data.map(a=>a.TimeDangSP);
+
+        for(var i=0;i<arrTenSP.length;i++){
+                var html="<tr>\n"+
+                "<td>"+arrTime[i]+"</td>\n"+
+                "<td><a href=\"chitietsp.html?query="+arrMaSP[i]+"\">"+arrTenSP[i]+"</a></td>\n"+
+                "<td>"+formatter.format(arrGia[i])+"</td>\n"+
+                "</tr>";
+                tabletext=tabletext.concat(html);
+            }
+            $('#tableDangDangBan').append(tabletext);
+    }).fail(function(xhr, textStatus, error) {
+        console.log(textStatus);
+        console.log(error);
+        console.log(xhr);
+    });
+})
+
 

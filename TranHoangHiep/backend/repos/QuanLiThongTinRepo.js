@@ -30,4 +30,7 @@ exports.getSPDangDauGia = function(email) {
     return db.load(sql);
 }
 
-
+exports.getSPDangBan = function(email) {
+    var sql = `select distinct sp.GiaHienTai, sp.MaSP, sp.TenSP, date_format(sp.TimeKetThuc, '%W %m/%d/%Y %l:%i %p') as TimeDangSP from nguoidung nd, sanpham sp where sp.MaNguoiBan=nd.MaNguoiDung AND nd.Email='${email}' AND TIME_TO_SEC(TIMEDIFF(now(),sp.TimeKetThuc))<0 group by sp.TenSP order by TimeDangSP desc`;
+    return db.load(sql);
+}
