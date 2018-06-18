@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="501bb09f-ff50-4d86-8720-47fca7b7f89d" name="Default" comment="" />
+    <list default="true" id="501bb09f-ff50-4d86-8720-47fca7b7f89d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Mo hinh csdl.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mo hinh csdl.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/anonymous/assets/me/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/anonymous/assets/me/login.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,26 +25,26 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+            <state relative-caret-position="731">
+              <caret line="43" column="3" lean-forward="true" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuyenDangBanRepo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repos/QuyenDangBanRepo.js">
+      <file leaf-file-name="DangSanPhamRepo.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/repos/DangSanPhamRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="51">
+              <caret line="3" column="217" selection-start-line="3" selection-start-column="217" selection-end-line="3" selection-end-column="217" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuyenDangBanController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apiControllers/QuyenDangBanController.js">
+      <file leaf-file-name="DangSanPhamController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apiControllers/DangSanPhamController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state relative-caret-position="68">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -58,7 +63,11 @@
     <findStrings>
       <find>categoryRepo</find>
       <find>insert</find>
+      <find>dangsp</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -87,11 +96,13 @@
         <option value="$PROJECT_DIR$/apiControllers/DauGiaController.js" />
         <option value="$PROJECT_DIR$/repos/DauGiaRepo.js" />
         <option value="$PROJECT_DIR$/repos/NguoiDungRepo.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js" />
         <option value="$PROJECT_DIR$/apiControllers/DSYeuThichController.js" />
         <option value="$PROJECT_DIR$/repos/QuyenDangBanRepo.js" />
         <option value="$PROJECT_DIR$/apiControllers/QuyenDangBanController.js" />
+        <option value="$PROJECT_DIR$/apiControllers/DangSanPhamController.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/repos/DangSanPhamRepo.js" />
       </list>
     </option>
   </component>
@@ -232,6 +243,7 @@
     <option name="width" value="694" />
     <option name="height" value="735" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -272,6 +284,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/src do an web/D11" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -294,6 +307,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.app.js">
+    <configuration name="DSYeuThichRepo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="DSYeuThichRepo.js" working-dir="$PROJECT_DIR$/repos" />
+    <configuration name="DangSanPhamRepo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="DangSanPhamRepo.js" working-dir="$PROJECT_DIR$/repos" />
     <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$" />
     <configuration name="mysql-db.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/fn/mysql-db.js" working-dir="$PROJECT_DIR$/fn" />
     <configuration name="node.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="node.js" working-dir="$PROJECT_DIR$" />
@@ -301,10 +316,14 @@
       <item itemvalue="Node.js.node.js" />
       <item itemvalue="Node.js.mysql-db.js" />
       <item itemvalue="Node.js.app.js" />
+      <item itemvalue="Node.js.DangSanPhamRepo.js" />
+      <item itemvalue="Node.js.DSYeuThichRepo.js" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.app.js" />
+        <item itemvalue="Node.js.DSYeuThichRepo.js" />
+        <item itemvalue="Node.js.DangSanPhamRepo.js" />
         <item itemvalue="Node.js.mysql-db.js" />
         <item itemvalue="Node.js.node.js" />
       </list>
@@ -333,12 +352,13 @@
       <workItem from="1528533952466" duration="4749000" />
       <workItem from="1528620065272" duration="3983000" />
       <workItem from="1528723470678" duration="583000" />
-      <workItem from="1529143069515" duration="5962000" />
+      <workItem from="1529143069515" duration="10574000" />
+      <workItem from="1529176217450" duration="1270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105022000" />
+    <option name="totallyTimeSpent" value="110904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,15 +370,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2787743" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50149477" side_tool="true" weight="0.34158415" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49850523" visible="true" weight="0.34158415" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50224215" side_tool="true" weight="0.34158415" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49775785" weight="0.34158415" />
       <window_info id="Structure" order="1" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32838285" />
       <window_info id="Favorites" order="2" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
@@ -384,20 +404,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fn/mysql-db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -559,20 +565,6 @@
     <entry file="file://$USER_HOME$/Desktop/src do an web/src 8/backend_src/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/repos/LoginRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apiControllers/LoginController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repos/DangKyRepo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -592,13 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="98" column="34" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -623,16 +608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repos/NguoiDungRepo.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="3" selection-start-line="47" selection-end-line="73" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/repos/NguoiDungRepo.js" />
     <entry file="file://$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
@@ -675,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apiControllers/DSYeuThichController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -689,17 +658,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repos/QuyenDangBanRepo.js">
+    <entry file="file://$PROJECT_DIR$/apiControllers/LoginController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="136">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apiControllers/QuyenDangBanController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        <state relative-caret-position="215">
+          <caret line="41" column="3" lean-forward="true" selection-start-line="27" selection-end-line="41" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-686">
+          <caret line="73" column="3" selection-start-line="47" selection-end-line="73" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repos/QuyenDangBanRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="7" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repos/LoginRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="3" lean-forward="true" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apiControllers/DangSanPhamController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repos/DangSanPhamRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="217" selection-start-line="3" selection-start-column="217" selection-end-line="3" selection-end-column="217" />
         </state>
       </provider>
     </entry>

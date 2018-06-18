@@ -72,9 +72,16 @@ $(document).on('click', '#btnLogin', function(){
             	window.location = "file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/anonymous/login.html";
             } 
             if(check==true && isDel!='yes'){
-            	localStorage.setItem('email',_email);
-            	localStorage.setItem('type',type);
-            	window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/buyer/profile.html";
+                if(type=='mua'){
+                    localStorage.setItem('email',_email);
+                    localStorage.setItem('type',type);
+                    window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/buyer/profile.html";
+                }
+            	if (type=='ban') {
+                    localStorage.setItem('email',_email);
+                    localStorage.setItem('type',type);
+                    window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/seller/profile.html";
+                }
             }
             else{
             	alert("Bạn nhập sai Email hoặc Mật khẩu. Vui lòng kiểm tra lại");
@@ -87,7 +94,6 @@ $(document).on('click', '#btnLogin', function(){
 		            timeout: 10000,
 		            type: 'GET',
 		        }).done(function(data) {
-		            alert("dasdsa");
 		        }).fail(function(xhr, textStatus, error) {
 		            console.log(textStatus);
 		            console.log(error);
