@@ -120,9 +120,11 @@ $(document).on('click', '#btnDangSP', function(){
             GiaMuaNgay: _giaMuaNgay,
             ThoiGianDangSP: _thoiGianDang,
             Email: _email,
-            isAuto: _giaHan,  
-        }    
-        $.ajax({
+            isAuto: _giaHan,
+            MoTa: _moTa,  
+        }
+        var check=0;
+        var sp=$.ajax({
             url: 'http://localhost:3000/dangsp/themSP',
             dataType: 'json',
             timeout: 10000,
@@ -130,12 +132,31 @@ $(document).on('click', '#btnDangSP', function(){
             contentType: 'application/json',
             data: JSON.stringify(body)
         }).done(function(data) {
-            $('#status').append("<div class=\"alert alert-success\"><p>Đăng ký thành công</p></div>");
-            $('html, body').animate({ scrollTop: 0 }, 'fast');
+            check++;
+            var mt=$.ajax({
+                    url: 'http://localhost:3000/dangsp/themMoTa',
+                    dataType: 'json',
+                    timeout: 10000,
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(body)
+                }).done(function(data) {
+                    check++;
+                    if(check==2){
+                        alert("ok");
+                    }
+                }).fail(function(xhr, textStatus, error) {
+                    console.log(textStatus);
+                    console.log(error);
+                    console.log(xhr);
+                });
         }).fail(function(xhr, textStatus, error) {
             console.log(textStatus);
             console.log(error);
             console.log(xhr);
         });
+
+        
+
     }
 })

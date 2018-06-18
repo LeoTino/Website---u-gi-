@@ -27,4 +27,21 @@ router.post('/themSP', (req, res) => {
         });
 });
 
+router.post('/themMoTa', (req, res) => {
+    sanPhamRepo.ThemMoTa(req.body)
+        .then(poco => {
+            var poco={
+                TenSP: req.body.TenSP,
+                MoTa: req.body.MoTa
+            };
+            res.statusCode = 201;
+            res.json(req.body);
+        })
+        .catch(err => {
+            console.log(err);
+            res.statusCode = 500;
+            res.end();
+        });
+});
+
 module.exports=router;
