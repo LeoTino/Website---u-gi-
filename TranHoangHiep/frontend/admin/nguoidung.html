@@ -4,7 +4,30 @@
 	<title>Client</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    
+    <style type="text/css">
+        .tabcontent {
+              display: none;
+              padding: 6px 12px;
+              border: 1px solid #ccc;
+              border-top: none;
+          }
+
+          table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+          }
+
+          th, td {
+              text-align: left;
+              padding: 16px;
+          }
+
+          tr:nth-child(even) {
+              background-color: #f2f2f2
+          }
+    </style>
 </head>
 <body>
     <script src="assets/jquery-3.1.1.min.js"></script>
@@ -19,13 +42,16 @@
                     <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="yeucau.html">Yêu cầu xin bán</a>
+                    <a class="nav-link" href="#"><p id="local"></p></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link disabled" href="nguoidung.html">Danh sách người dùng</a>
+                <a class="nav-link disabled" href="yeucau.html">Yêu cầu xin bán</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link disabled" href="danhmuc.html">Danh sách danh mục</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="logout.html">Đăng xuất</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="timkiemsp.html">
@@ -37,7 +63,7 @@
 
 <!------           start body                    --->
 <h1>Trang quản trị người dùng...</h1>
-
+<p id="dsnd"></p>
 <!------           end body                    --->
 	</div>
     <br><br><br>

@@ -14,6 +14,7 @@ var daugiaCtrl=require('./apiControllers/DauGiaController');
 var quyendangbanCtrl=require('./apiControllers/QuyenDangBanController');
 var dangspCtrl=require('./apiControllers/DangSanPhamController');
 var xinbanCtrl=require('./apiControllers/YeuCauXinBanController');
+var taikhoanCtrl= require('./apiControllers/QLTaiKhoanController');
 
 var app = express();
 
@@ -40,6 +41,8 @@ app.use('/daugia',daugiaCtrl);
 app.use('/quyendangban',quyendangbanCtrl);
 app.use('/dangsp',dangspCtrl);
 app.use('/xinban',xinbanCtrl);
+app.use('/taikhoan',taikhoanCtrl);
+
 
 
 app.listen(3000, () => {

@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         for(var i=0;i<arrTenND.length;i++){
             if(arrIsDelete[i]=='yes'){
-                i++;
+                //
             }
             else{
                 var tt;
