@@ -1,37 +1,58 @@
+var email;
+
 $(document).ready(function() {
+    email=localStorage.getItem('email');
+    $("#local").append(email);
     $.ajax({
-        url: 'http://localhost:3000/sanpham/top5',
+        url: 'http://localhost:3000/xinban/loadyeucau',
         dataType: 'json',
         timeout: 10000,
-        //type: 'get',
-        //contentType: 'application/json',
-        //data: JSON.stringify(body)
     }).done(function(data) {
-        var srcImgSP=data.map(a =>a.Hinh1);
-        var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
-        var arrGiaKD=data.map(a => a.GiaKhoiDiem);
-        var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
-        for(var i=0;i<arrNameSP.length;i++){
-            var x="<div class=\"card\" style=\"width: 20rem\">\n" +
-            "<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
-            "<div class=\"card-body\">\n" +
-            "<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
-            + "<p>Giá khởi điểm: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
-            + "<a href=\"#\" class=\"btn btn-primary\">Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</a> </div> </div>" ;//button
-            //ten+="<p> "+ arrNameSP[i] +" </p>\n";
-            $("#top5").append(x);
+        var arrMaND=data.map(a=>a.MaNguoiDung);
+        var arrTenND=data.map(a=>a.TenNguoiDung);
+        var arrIsApproved=data.map(a=>a.isApproved);
+        var arrEmail=data.map(a=>a.Email);
+        var arrIsDelete=data.map(a=>a.isDelete);
+        var arrThoiGian=data.map(a=>a.ThoiGianYeuCau);
+        var text="<tr>"
+                +"<th>Thời gian yêu cầu</th>"
+                +"<th>Email</th>"
+                +"<th>Tên người dùng</th>"
+                +"<th>Trạng thái yêu cầu</th>"
+                +"<th>Bấm để duyệt</th>"
+                +"</tr>";
+
+        for(var i=0;i<arrTenND.length;i++){
+            if(arrIsDelete[i]=='yes'){
+                i++;
+            }
+            else{
+                var tt;
+                if(arrIsApproved[i]=='no'){
+                    tt='[Chưa duyệt]';
+                    var ht= "<tr>"+
+                            "<td>"+arrThoiGian[i]+"</td>"+
+                            "<td>"+arrEmail[i]+"</td>"+
+                            "<td>"+arrTenND[i]+"</td>"+
+                            "<td>"+tt+"</td>"+
+                            "<td><button type=\"button\" value=\""+ arrMaND[i] +"\" id=\"btnDuyet\" class=\"btn btn-primary\">Duyệt</button></td>"+
+                            "</tr>";
+                    text=text.concat(ht);
+                }
+                else{
+                    tt='[Đã duyệt]';
+                    var ht= "<tr>"+
+                            "<td>"+arrThoiGian[i]+"</td>"+
+                            "<td>"+arrEmail[i]+"</td>"+
+                            "<td>"+arrTenND[i]+"</td>"+
+                            "<td>"+tt+"</td>"+
+                            "<td><button type=\"button\" value=\""+ arrMaND[i] +"\" id=\"btnDuyet\" class=\"btn\" disabled>Duyệt</button></td>"+
+                            "</tr>";
+                    text=text.concat(ht);
+                }  
+            }
         }
-        //alert(x);
-        //document.getElementById("sp").innerHTML= text;
-        //pic[1].src=srcImgSP[1];
-        //var arrNameSP = data.map(a => a.foo);
-        /*var listName=JSON.stringify(data[0]);
-        var name=JSON.parse(listName);
-        $("p").append(name.TenSP);
-        var pic=document.getElementById('pic');
-        pic.src=name.Hinh1;
-*/
-         //alert(name["TenSP"]);
+        $("#dsyc").append(text);
     }).fail(function(xhr, textStatus, error) {
         console.log(textStatus);
         console.log(error);
@@ -39,61 +60,44 @@ $(document).ready(function() {
     });
 });
 
-
-
-$(document).ready(function() {
-    $.ajax({
-        url: 'http://localhost:3000/sanpham/top5b',
+$(document).on('click', '#btnDuyet', function(){
+    var maND=$(this).attr("value");
+    var check=0;
+    var a1=$.ajax({
+        url: 'http://localhost:3000/xinban/duyetyeucau/'+maND,
         dataType: 'json',
         timeout: 10000,
     }).done(function(data) {
-        var srcImgSP=data.map(a =>a.Hinh1);
-        var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
-        var arrGiaKD=data.map(a => a.GiaKhoiDiem);
-        var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
-        for(var i=0;i<arrNameSP.length;i++){
-            var x="<div class=\"card\" style=\"width: 20rem\">\n" +
-            "<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
-            "<div class=\"card-body\">\n" +
-            "<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
-            + "<p>Giá khởi điểm: "+ arrGiaKD[i] +" VND</p>\n" //mieu ta
-            + "<a href=\"#\" class=\"btn btn-primary\">Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</a> </div> </div>" ;//button
-            $("#top5b").append(x);
-        }
+        check++;
+        a1=$.Deferred();
     }).fail(function(xhr, textStatus, error) {
         console.log(textStatus);
         console.log(error);
         console.log(xhr);
-    });
-});
+    })
 
-
-$(document).ready(function() {
-    $.ajax({
-        url: 'http://localhost:3000/sanpham/top5c',
+    var a2=$.ajax({
+        url: 'http://localhost:3000/xinban/capnhatquyen/'+maND,
         dataType: 'json',
         timeout: 10000,
     }).done(function(data) {
-        var srcImgSP=data.map(a =>a.Hinh1);
-        var arrNameSP=data.map(a => a.TenSP); //string name+srcImgSP[i]+
-        var arrGiaKD=data.map(a => a.TimeDistance);
-        var arrGiaMuaNgay=data.map(a=>a.GiaMuaNgay);
-        for(var i=0;i<arrNameSP.length;i++){
-            var x="<div class=\"card\" style=\"width: 20rem\">\n" +
-            "<img class=\"rounded mx-auto d-block\"  src="+ srcImgSP[i] +" height=\"125\" width=\"180\" alt=\"Card image cap\">\n" + //hinh anh
-            "<div class=\"card-body\">\n" +
-            "<h5 class=\"card-title\">"+ arrNameSP[i] +"</h5>\n" //title ten sp
-            + "<p>Giá mua ngay: "+ arrGiaMuaNgay[i] +" VND</p>\n" //mieu ta
-            + "<a id=\"time\" href=\"#\" class=\"btn btn-primary\">Còn "+ arrGiaKD[i] +" là hết hạn</a> </div> </div>" ;//button
-            $("#top5c").append(x);
-        }
-		
+        check++;
+        a2=$.Deferred();
     }).fail(function(xhr, textStatus, error) {
         console.log(textStatus);
         console.log(error);
         console.log(xhr);
+    })
+
+    $.when( a1, a2 ).done(function () {
+        if(check==2){
+            alert('Duyệt thành công!');
+        }
+        location.reload();
     });
-});
+
+    
+})
 
 
 

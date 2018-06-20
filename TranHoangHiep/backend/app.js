@@ -13,6 +13,7 @@ var dsyeuthichCtrl=require('./apiControllers/DSYeuThichController');
 var daugiaCtrl=require('./apiControllers/DauGiaController');
 var quyendangbanCtrl=require('./apiControllers/QuyenDangBanController');
 var dangspCtrl=require('./apiControllers/DangSanPhamController');
+var xinbanCtrl=require('./apiControllers/YeuCauXinBanController');
 
 var app = express();
 
@@ -38,6 +39,8 @@ app.use('/wishlist',dsyeuthichCtrl);
 app.use('/daugia',daugiaCtrl);
 app.use('/quyendangban',quyendangbanCtrl);
 app.use('/dangsp',dangspCtrl);
+app.use('/xinban',xinbanCtrl);
+
 
 app.listen(3000, () => {
     console.log('API running on port 3000');
