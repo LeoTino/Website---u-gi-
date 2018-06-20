@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="501bb09f-ff50-4d86-8720-47fca7b7f89d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repos/SanPhamRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/repos/SanPhamRepo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repos/TimKiemRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/repos/TimKiemRepo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/admin/danhmuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/admin/danhmuc.html" afterDir="false" />
-    </list>
+    <list default="true" id="501bb09f-ff50-4d86-8720-47fca7b7f89d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -71,7 +65,7 @@
       <file leaf-file-name="TimKiemRepo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="238">
               <caret line="14" column="552" selection-start-line="14" selection-start-column="552" selection-end-line="14" selection-end-column="552" />
             </state>
           </provider>
@@ -417,12 +411,12 @@
       <workItem from="1529143069515" duration="10574000" />
       <workItem from="1529176217450" duration="1270000" />
       <workItem from="1529329039373" duration="8168000" />
-      <workItem from="1529482059437" duration="11113000" />
+      <workItem from="1529482059437" duration="11439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130185000" />
+    <option name="totallyTimeSpent" value="130511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,8 +428,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2787743" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
@@ -806,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="238">
           <caret line="14" column="552" selection-start-line="14" selection-start-column="552" selection-end-line="14" selection-end-column="552" />
         </state>
       </provider>
