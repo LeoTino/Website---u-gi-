@@ -21,7 +21,7 @@ exports.loadByPrice = function() {
 }
 
 exports.loadByExpireTime = function() {
-    var sql = `SELECT DISTINCT MaSP, TenSP, GiaMuaNgay, Hinh1, TIMEDIFF(TimeKetThuc,NOW()) as TimeDistance from sanpham ORDER BY TimeDistance asc LIMIT 5`;
+    var sql = `SELECT DISTINCT MaSP, TenSP, GiaMuaNgay, Hinh1, TIMEDIFF(TimeKetThuc,NOW()) as TimeDistance from sanpham where TIME_TO_SEC(TIMEDIFF(now(),TimeKetThuc))<0 ORDER BY TimeDistance asc LIMIT 5`;
     return db.load(sql);
 }
 

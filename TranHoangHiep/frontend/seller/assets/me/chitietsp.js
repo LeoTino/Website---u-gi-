@@ -377,6 +377,7 @@ $(document).on('click', '#ud', function(){
 
 $(document).on('click', '#btnUpdate', function(){
     var _maSP=getParameterByName('query');
+    tinyMCE.triggerSave();
     var _moTa=$('#txtMoTa2').val();
     if($('#txtMoTa2').val()==''){
         alert("Bạn hãy nhập mô tả sản phẩm");

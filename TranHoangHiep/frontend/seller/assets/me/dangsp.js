@@ -98,6 +98,7 @@ $(document).ready(function(){
 $(document).on('click', '#btnDangSP', function(){
     var isValid = $('#frmDangSP').valid();
     var _email= localStorage.getItem('email');
+    tinyMCE.triggerSave();
     if (isValid) {
         var _tenSP = $('#txtTenSP').val();
             _hinh1=$('#txtHinh1').val();

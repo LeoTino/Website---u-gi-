@@ -4,6 +4,7 @@
 	<title>Client</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
 <style type="text/css">
 	body {font-family: Arial;}
 	/* Style the tab */
@@ -233,7 +234,7 @@
 
 	<div id="update" class="tabcontent">
 		<form id="frmUpdate">
-			<textarea rows="10" class="form-control" id="txtMoTa2" name="MoTa2" placeholder="Nhập một vài thông tin mô tả sản phẩm này. Để xuống dòng, vui lòng thêm tag <br>"></textarea>
+			<textarea rows="10" class="form-control" id="txtMoTa2" name="MoTa2""></textarea>
 			<button id="btnUpdate" type="button" class="btn btn-info btn-lg">Cập nhật thông tin</button>
 		</form>
 		<p id="contentUpdate"></p>
@@ -243,7 +244,22 @@
 
 </div>
 
-	
+<script type="text/javascript">
+    tinymce.init({
+    selector: '#txtMoTa2',
+    height: 500,
+    theme: 'modern',
+    plugins: [
+      'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+      'searchreplace wordcount visualblocks visualchars code fullscreen',
+      'insertdatetime media nonbreaking save table contextmenu directionality',
+      'emoticons template paste textcolor colorpicker textpattern imagetools'
+    ],
+    toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+    toolbar2: 'print preview media | forecolor backcolor emoticons',
+    image_advtab: true
+});
+  </script>	
 
 </body>
 </html>
