@@ -5,7 +5,7 @@ $(document).ready(function() {
         localStorage.removeItem('email');
         localStorage.removeItem('type');
         alert("Bạn chưa đăng nhập, vui lòng đăng nhập để tiếp tục");
-        window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/anonymous/login.html";
+        window.location="file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/anonymous/login.html";
     }
     else{
         $("#local").append(email);
@@ -24,7 +24,7 @@ $(document).on('click', '#btnDangKy', function(){
 	}).done(function(data) {
 		if(data.QuyenDangBan=='yes'){
 			alert("Bạn đã có quyền đăng bán. Vui lòng đăng nhập lại");
-			window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/anonymous/login.html";
+			window.location="file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/anonymous/login.html";
 	    }
 		if(data.QuyenDangBan=='no'){
 	   		var maND=data.MaNguoiDung;

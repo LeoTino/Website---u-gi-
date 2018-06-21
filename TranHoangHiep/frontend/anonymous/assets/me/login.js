@@ -69,28 +69,28 @@ $(document).on('click', '#btnLogin', function(){
             }
             if(isDel=='yes'){
             	alert("Tài khoản này đã bị xóa");
-            	window.location = "file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/anonymous/login.html";
+            	window.location = "file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/anonymous/login.html";
             } 
             if(check==true && isDel!='yes'){
                 if(type=='mua'){
                     localStorage.setItem('email',_email);
                     localStorage.setItem('type',type);
-                    window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/buyer/profile.html";
+                    window.location="file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/buyer/profile.html";
                 }
             	if (type=='ban') {
                     localStorage.setItem('email',_email);
                     localStorage.setItem('type',type);
-                    window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/seller/profile.html";
+                    window.location="file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/seller/profile.html";
                 }
                 if (type=='admin') {
                     localStorage.setItem('email',_email);
                     localStorage.setItem('type',type);
-                    window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/admin/index.html";
+                    window.location="file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/admin/index.html";
                 }
             }
             else{
             	alert("Bạn nhập sai Email hoặc Mật khẩu. Vui lòng kiểm tra lại");
-            	window.location = "file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/anonymous/login.html";
+            	window.location = "file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/anonymous/login.html";
             }
             if(check==true){
 				$.ajax({

@@ -88,7 +88,7 @@ $(document).ready(function(){
         localStorage.removeItem('email');
         localStorage.removeItem('type');
         alert("Bạn chưa đăng nhập, vui lòng đăng nhập để tiếp tục");
-        window.location="file:///F:/Git/Do%20An%20web%202/Website---u-gi-/TranHoangHiep/frontend/anonymous/login.html";
+        window.location="file:///C:/Users/langt/Documents/GitHub/Website-dau-gia/TranHoangHiep/frontend/anonymous/login.html";
     }
     else{
         $("#local").append(_email);
@@ -126,8 +126,8 @@ $(document).on('click', '#btnDangSP', function(){
             isAuto: _giaHan,
             MoTa: _moTa,  
         }
-        var check=0;
-        var sp=$.ajax({
+
+        $.ajax({
             url: 'http://localhost:3000/dangsp/themSP',
             dataType: 'json',
             timeout: 10000,
@@ -135,31 +135,25 @@ $(document).on('click', '#btnDangSP', function(){
             contentType: 'application/json',
             data: JSON.stringify(body)
         }).done(function(data) {
-            check++;
-            var mt=$.ajax({
-                    url: 'http://localhost:3000/dangsp/themMoTa',
-                    dataType: 'json',
-                    timeout: 10000,
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify(body)
-                }).done(function(data) {
-                    check++;
-                    if(check==2){
-                        alert("Sản phẩm của bạn đã được đăng!");
-                    }
-                }).fail(function(xhr, textStatus, error) {
-                    console.log(textStatus);
-                    console.log(error);
-                    console.log(xhr);
-                });
+            $.ajax({
+                url: 'http://localhost:3000/dangsp/themMoTa',
+                dataType: 'json',
+                timeout: 10000,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(body)
+            }).done(function(data) {
+                alert("Sản phẩm của bạn đã được đăng!");
+                location.reload();
+            }).fail(function(xhr, textStatus, error) {
+                console.log(textStatus);
+                console.log(error);
+                console.log(xhr);
+            });
         }).fail(function(xhr, textStatus, error) {
             console.log(textStatus);
             console.log(error);
             console.log(xhr);
         });
-
-        
-
     }
 })

@@ -20,7 +20,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="731">
               <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="QuanLiThongTinRepo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repos/QuanLiThongTinRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="561">
               <caret line="33" column="269" selection-start-line="33" selection-start-column="224" selection-end-line="33" selection-end-column="269" />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="SanPhamController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="204">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -56,8 +56,8 @@
       <file leaf-file-name="SanPhamRepo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="23" column="153" selection-start-line="23" selection-start-column="153" selection-end-line="23" selection-end-column="153" />
+            <state relative-caret-position="391">
+              <caret line="23" column="202" selection-start-line="23" selection-start-column="202" selection-end-line="23" selection-end-column="202" />
             </state>
           </provider>
         </entry>
@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="552" selection-start-line="14" selection-start-column="552" selection-end-line="14" selection-end-column="552" />
+              <caret line="14" column="595" selection-start-line="14" selection-start-column="595" selection-end-line="14" selection-end-column="595" />
             </state>
           </provider>
         </entry>
@@ -74,7 +74,7 @@
       <file leaf-file-name="QLTaiKhoanController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiControllers/QLTaiKhoanController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-805">
+            <state relative-caret-position="884">
               <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
             </state>
           </provider>
@@ -83,8 +83,8 @@
       <file leaf-file-name="ChiTietSanPhamRepo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repos/ChiTietSanPhamRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="442">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -92,8 +92,8 @@
       <file leaf-file-name="QuanLiThongTinController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+            <state relative-caret-position="1734">
+              <caret line="102" column="22" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -280,6 +280,7 @@
       <path value="$PROJECT_DIR$/node_modules/statuses/package.json" />
       <path value="$PROJECT_DIR$/node_modules/string_decoder/package.json" />
       <path value="$PROJECT_DIR$/node_modules/sweetalert/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/tinymce/package.json" />
       <path value="$PROJECT_DIR$/node_modules/tough-cookie/package.json" />
       <path value="$PROJECT_DIR$/node_modules/tunnel-agent/package.json" />
       <path value="$PROJECT_DIR$/node_modules/tweetnacl/package.json" />
@@ -292,7 +293,7 @@
       <path value="$PROJECT_DIR$/node_modules/verror/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="673" />
     <option name="width" value="694" />
     <option name="height" value="735" />
@@ -412,11 +413,12 @@
       <workItem from="1529176217450" duration="1270000" />
       <workItem from="1529329039373" duration="8168000" />
       <workItem from="1529482059437" duration="11439000" />
+      <workItem from="1529548957268" duration="715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130511000" />
+    <option name="totallyTimeSpent" value="131226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,15 +430,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.2787743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.27818447" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50224215" side_tool="true" weight="0.34158415" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49775785" visible="true" weight="0.34158415" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49775785" visible="true" weight="0.34022257" />
       <window_info id="Structure" order="1" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32838285" />
       <window_info id="Favorites" order="2" sideWeight="0.5036855" side_tool="true" weight="0.2541106" />
@@ -445,8 +446,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,23 +605,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../frontend/anonymous/assets/style.css" />
-    <entry file="file://$USER_HOME$/Desktop/src do an web/src 8/backend_src/repos/userRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/src do an web/src 8/backend_src/apiControllers/userController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="8" selection-end-line="43" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/src do an web/src 8/backend_src/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/src do an web/src 8/backend_src/repos/userRepo.js" />
+    <entry file="file://$USER_HOME$/Desktop/src do an web/src 8/backend_src/apiControllers/userController.js" />
+    <entry file="file://$USER_HOME$/Desktop/src do an web/src 8/backend_src/app.js" />
     <entry file="file://$PROJECT_DIR$/repos/ChangeInfoRepo.js" />
     <entry file="file://$PROJECT_DIR$/fn/mysql-db.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -708,15 +696,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apiControllers/QLTaiKhoanController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-805">
+        <state relative-caret-position="884">
           <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apiControllers/QuanLiThongTinController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+        <state relative-caret-position="1734">
+          <caret line="102" column="22" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -764,43 +752,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="731">
           <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repos/ChiTietSanPhamRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repos/QuanLiThongTinRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="561">
           <caret line="33" column="269" selection-start-line="33" selection-start-column="224" selection-end-line="33" selection-end-column="269" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apiControllers/SanPhamController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="204">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repos/SanPhamRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="23" column="153" selection-start-line="23" selection-start-column="153" selection-end-line="23" selection-end-column="153" />
+        <state relative-caret-position="391">
+          <caret line="23" column="202" selection-start-line="23" selection-start-column="202" selection-end-line="23" selection-end-column="202" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repos/TimKiemRepo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="552" selection-start-line="14" selection-start-column="552" selection-end-line="14" selection-end-column="552" />
+          <caret line="14" column="595" selection-start-line="14" selection-start-column="595" selection-end-line="14" selection-end-column="595" />
         </state>
       </provider>
     </entry>
